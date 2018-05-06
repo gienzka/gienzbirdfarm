@@ -42,7 +42,7 @@ class LoginSignup extends CI_Controller {
 			'email' => $email,
 			'password' => $pass
 			);
-		$cek = $this->CrudModel->cek_login("gbf_user",$where)->num_rows();
+		$cek = $this->CrudModel->cek_data("gbf_user",$where)->num_rows();
 		if($cek > 0){
             
 			$data_session = array(
@@ -51,12 +51,12 @@ class LoginSignup extends CI_Controller {
 				);
  
 			$this->session->set_userdata($data_session);
-            $data['user'] = $this->CrudModel->cek_login("gbf_user",$where)->result();
+            $data['user'] = $this->CrudModel->cek_data("gbf_user",$where)->result();
             foreach ($data['user'] as $u){
                 if($u->access > 0){
                     redirect(base_url().'Welcome/profile');
                 } else {
-                    redirect(base_url().'Welcome/contact');
+                    redirect(base_url().'Welcome/admin');
                 }
             }
  
@@ -67,6 +67,6 @@ class LoginSignup extends CI_Controller {
  
 	function logout(){
 		$this->session->sess_destroy();
-		redirect(base_url('login'));
+		redirect(base_url().'Welcome/login');
 	}
 }

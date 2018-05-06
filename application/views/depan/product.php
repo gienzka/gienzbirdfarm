@@ -35,7 +35,7 @@
         <div class="collapse navbar-collapse" id="probootstrap-menu">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Home</a></li>
-            <li class="nav-item active"><a class="nav-link" href="<?php echo base_url(). 'Welcome/product'; ?>">Product</a></li>
+            <li class="nav-item active"><a class="nav-link" href="<?php echo base_url(). 'Welcome/product'; ?>">Birds</a></li>
             <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'Welcome/profile'; ?>">Profile</a></li>
             <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'Welcome/login'; ?>">Login</a></li>
             <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'Welcome/contact'; ?>">Contact</a></li>
@@ -59,17 +59,17 @@
         </div>
       </div>
     
-    </section>
+    </section> 
     
  <section class="probootstrap_section" id="section-city-guides" >
-      <div class="container"  >
+      <div class="container" >
         <!-- <div class="row text-center mb-5 probootstrap-animate">
           <div class="col-md-12">
             <h2 class="display-4 border-bottom probootstrap-section-heading">Our Birds</h2>
           </div>
         </div> -->
         <div class="row"  >
-          <div class="col-lg-3 col-md-6 probootstrap-animate mb-3">
+          <div class="col-lg-4 col-md-6 probootstrap-animate mb-3">
             <a href="#" class="probootstrap-thumbnail">
               <img src="<?php echo base_url(). 'assets/images/imgMurai.jpg'; ?>" alt="Free Template by uicookies.com" class="img-fluid">
               <div class="probootstrap-text">
@@ -77,13 +77,13 @@
               </div>
             </a>
           </div>
-          <div class="col-lg-3 col-md-6 probootstrap-animate mb-3">
+          <div class="col-lg-4 col-md-6 probootstrap-animate mb-3">
             <a href="#" class="probootstrap-thumbnail">
               <img src="<?php echo base_url(). 'assets/images/img_2.jpg'; ?>" alt="Free Template by uicookies.com" class="img-fluid">
               <h3>Lovebird</h3>
             </a>
           </div>
-          <div class="col-lg-3 col-md-6 probootstrap-animate mb-3">
+          <div class="col-lg-4 col-md-6 probootstrap-animate mb-3">
             <a href="#" class="probootstrap-thumbnail">
               <img src="<?php echo base_url(). 'assets/images/img_3.jpg'; ?>" alt="Free Template by uicookies.com" class="img-fluid">
               <h3>Kenari Yorkshire</h3>

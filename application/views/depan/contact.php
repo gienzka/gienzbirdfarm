@@ -35,7 +35,7 @@
         <div class="collapse navbar-collapse" id="probootstrap-menu">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item "><a class="nav-link" href="<?php echo base_url(); ?>">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'Welcome/product'; ?>">Product</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'Welcome/product'; ?>">Birds</a></li>
             <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'Welcome/profile'; ?>">Profile</a></li>
             <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'Welcome/login'; ?>">Login</a></li>
             <li class="nav-item active"><a class="nav-link" href="<?php echo base_url(). 'Welcome/contact'; ?>">Contact</a></li>

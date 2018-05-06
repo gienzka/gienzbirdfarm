@@ -36,7 +36,7 @@
         <div class="collapse navbar-collapse" id="probootstrap-menu">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active"><a class="nav-link" href="<?php echo base_url(); ?>">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'Welcome/product'; ?>">Product</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'Welcome/product'; ?>">Birds</a></li>
             <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'Welcome/profile'; ?>">Profile</a></li>
             <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'Welcome/login'; ?>">Login</a></li>
             <li class="nav-item"><a class="nav-link" href="<?php echo base_url(). 'Welcome/contact'; ?>">Contact</a></li>
@@ -126,7 +126,6 @@
         </div>
       </div>
     </section>
-    <!-- END section -->
         
         
     <section class="probootstrap_section">
@@ -138,125 +137,30 @@
         </div>
         
         <div class="row probootstrap-animate">
+            
+            
           <div class="col-md-12">
             <div class="owl-carousel js-owl-carousel-2">
+                <?php 
+            foreach($gallery as $g){ 
+            ?>
               <div>
                 <div class="media probootstrap-media d-block align-items-stretch mb-4 probootstrap-animate">
-                  <img src="<?php echo base_url().'assets/images/gal1.jpg'; ?>" alt="Free Template by uiCookies" class="img-fluid">
+                  <img height="70px" width="100px" src="<?php echo base_url().$g->photo ?>"  class="img-thumbnail">
                   <div class="media-body">
-                    <h5 class="mb-3">Murai Batu</h5>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+                    <h5 class="mb-3"><?php echo $g->judul ?></h5>
+                    <p><?php echo $g->deskripsi ?></p>
                   </div>
                 </div>
               </div>
-              <!-- END slide item -->
-
-              <div>
-                <div class="media probootstrap-media d-block align-items-stretch mb-4 probootstrap-animate">
-                  <img src="<?php echo base_url().'assets/images/gal1.jpg'; ?>" alt="Free Template by uiCookies" class="img-fluid">
-                  <div class="media-body">
-                    <h5 class="mb-3">Kenari Yorkshire</h5>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-                  </div>
-                </div>
-              </div>
-              <!-- END slide item -->
-
-              <div>
-                <div class="media probootstrap-media d-block align-items-stretch mb-4 probootstrap-animate">
-                  <img src="<?php echo base_url().'assets/images/gal1.jpg'; ?>" alt="Free Template by uiCookies" class="img-fluid">
-                  <div class="media-body">
-                    <h5 class="mb-3">Lovebird</h5>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-                  </div>
-                </div>
-              </div>
-              <!-- END slide item -->
-
-              <div>
-                <div class="media probootstrap-media d-block align-items-stretch mb-4 probootstrap-animate">
-                  <img src="assets/images/sq_img_4.jpg" alt="Free Template by uiCookies" class="img-fluid">
-                  <div class="media-body">
-                    <h5 class="mb-3">02. Service Title Here</h5>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-                  </div>
-                </div>
-              </div>
-              <!-- END slide item -->
-
-              <div>
-                <div class="media probootstrap-media d-block align-items-stretch mb-4 probootstrap-animate">
-                  <img src="assets/images/sq_img_5.jpg" alt="Free Template by uiCookies" class="img-fluid">
-                  <div class="media-body">
-                    <h5 class="mb-3">02. Service Title Here</h5>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-                  </div>
-                </div>
-              </div>
-              <!-- END slide item -->
-
-
-              <div>
-                <div class="media probootstrap-media d-block align-items-stretch mb-4 probootstrap-animate">
-                  <img src="assets/images/sq_img_2.jpg" alt="Free Template by uiCookies" class="img-fluid">
-                  <div class="media-body">
-                    <h5 class="mb-3">02. Service Title Here</h5>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-                  </div>
-                </div>
-              </div>
-              <!-- END slide item -->
-
-              <div>
-                <div class="media probootstrap-media d-block align-items-stretch mb-4 probootstrap-animate">
-                  <img src="assets/images/sq_img_1.jpg" alt="Free Template by uiCookies" class="img-fluid">
-                  <div class="media-body">
-                    <h5 class="mb-3">02. Service Title Here</h5>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-                  </div>
-                </div>
-              </div>
-              <!-- END slide item -->
-
-              <div>
-                <div class="media probootstrap-media d-block align-items-stretch mb-4 probootstrap-animate">
-                  <img src="assets/images/sq_img_3.jpg" alt="Free Template by uiCookies" class="img-fluid">
-                  <div class="media-body">
-                    <h5 class="mb-3">02. Service Title Here</h5>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-                  </div>
-                </div>
-              </div>
-              <!-- END slide item -->
-
-              <div>
-                <div class="media probootstrap-media d-block align-items-stretch mb-4 probootstrap-animate">
-                  <img src="assets/images/sq_img_4.jpg" alt="Free Template by uiCookies" class="img-fluid">
-                  <div class="media-body">
-                    <h5 class="mb-3">02. Service Title Here</h5>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-                  </div>
-                </div>
-              </div>
-              <!-- END slide item -->
-
-              <div>
-                <div class="media probootstrap-media d-block align-items-stretch mb-4 probootstrap-animate">
-                  <img src="assets/images/sq_img_5.jpg" alt="Free Template by uiCookies" class="img-fluid">
-                  <div class="media-body">
-                    <h5 class="mb-3">02. Service Title Here</h5>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-                  </div>
-                </div>
-              </div>
-              <!-- END slide item -->
-              
+            <?php } ?>
+            
             </div>
           </div>
+           
         </div>
       </div>
     </section>
-    <!-- END section -->
         
 <!--
     <section class="probootstrap_section">
