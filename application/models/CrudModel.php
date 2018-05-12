@@ -21,6 +21,10 @@ class CrudModel extends CI_Model{
 		return $this->db->get($table);
 	}
     
+    function viewdb($table, $where){
+		return $this->db->get_where($table,$where);
+	}
+    
     function viewuser($table,$number,$offset){
         $where = array(
 			'access' => '1',

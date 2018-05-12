@@ -87,4 +87,16 @@ class Welcome extends CI_Controller {
 		$data['news'] = $this->CrudModel->data('gbf_news',$config['per_page'],$from);
         $this->load->view('admin/addnews',$data); 
     }
+    public function userprofile()
+    {
+        $where = array(
+			'email' => 'yasin.awb@gmail.com',
+			);
+        $data['user'] = $this->CrudModel->viewdb('gbf_user',$where)->result();
+		$this->load->view('user/profile',$data);
+    }
+    public function homelogin()
+	{
+		$this->load->view('user/homelogin');
+	}
 }
