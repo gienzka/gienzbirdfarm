@@ -99,4 +99,25 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('user/homelogin');
 	}
+    public function history()
+	{
+		$this->load->database();
+		$jumlah_data = $this->CrudModel->jumlah_data('gbf_book');
+		$this->load->library('pagination');
+		$config['base_url'] = base_url().'Welcome/index/';
+		$config['total_rows'] = $jumlah_data;
+		$config['per_page'] = 5;
+		$from = $this->uri->segment(3);
+		$this->pagination->initialize($config);		
+		$data['book'] = $this->CrudModel->data('gbf_book',$config['per_page'],$from);
+        $this->load->view('user/history',$data);
+	}
+    public function book()
+	{
+		$where = array(
+			'email' => 'yasin.awb@gmail.com',
+			);
+        $data['user'] = $this->CrudModel->viewdb('gbf_user',$where)->result();
+		$this->load->view('user/book',$data);
+	}
 }
