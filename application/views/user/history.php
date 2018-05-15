@@ -79,7 +79,7 @@
                                   <tbody>
                                        <?php 
                                         $no = 1;
-                                        foreach($book as $b){ 
+                                        foreach($data as $b){ 
                                         ?>
                                     <tr>
                                       <th scope="row"><?php echo $no++ ?></th>
@@ -89,14 +89,12 @@
                                       <td><?php echo $b->indukB ?></td>
                                       <td><?php echo $b->catatan ?></td>
                                       <td><?php echo $b->status ?></td>
-                                      <td><form action="<?php echo base_url(). 'User/cancelbook'; ?>" method="post"><input type="hidden" name="kode" value="<?php echo $b->id ?>"  required><input type="submit" value="Cancel Booking" class="btn btn-warning"></form></td>
+                                      <td><form action="<?php echo base_url(). 'User/cancelbook'; ?>" method="post"><input type="hidden" name="kode" value="<?php echo $b->kode ?>"  required><input type="submit" value="Cancel Booking" class="class="btn btn-primary p-3 mr-3 pl-5 pr-5 text-uppercase d-lg-inline d-md-inline d-sm-block d-block mb-3""></form></td>
                                     </tr>
                                       <?php } ?>
                                   </tbody>
                                 </table>
-                                <?php 
-                                    echo $this->pagination->create_links();
-                                ?>
+                    
                               </div>
            
             
@@ -120,27 +118,23 @@
                                     <tr>
                                         <th scope="col">No</th>
                                         <th scope="col">Kode Booking</th>
-                                        <th scope="col">Tanggal Booking</th>
+                                        <th scope="col">Tanggal</th>
                                         <th scope="col">Induk Jantan</th>
                                         <th scope="col">Induk Betina</th>
-                                        <th scope="col">Catatan</th>
-                                        <th scope="col">Status</th>
+                    
                                     </tr>
                                   </thead>
                                   <tbody>
                                        <?php 
                                         $no = 1;
-                                        foreach($book as $b){ 
+                                        foreach($data1 as $h){ 
                                         ?>
                                     <tr>
                                       <th scope="row"><?php echo $no++ ?></th>
-                                      <td><?php echo $b->kode ?></td>
-                                      <td><?php echo $b->tanggal ?></td>
-                                      <td><?php echo $b->indukJ ?></td>
-                                      <td><?php echo $b->indukB ?></td>
-                                      <td><?php echo $b->catatan ?></td>
-                                      <td><?php echo $b->status ?></td>
-                                      <td><form action="<?php echo base_url(). 'User/cancelbook'; ?>" method="post"><input type="hidden" name="kode" value="<?php echo $b->id ?>"  required><input type="submit" value="Cancel Booking" class="btn btn-warning"></form></td>
+                                      <td><?php echo $h->kode ?></td>
+                                      <td><?php echo $h->tanggal ?></td>
+                                      <td><?php echo $h->indukJ ?></td>
+                                      <td><?php echo $h->indukB ?></td>
                                     </tr>
                                       <?php } ?>
                                   </tbody>
@@ -148,6 +142,7 @@
                                 <?php 
                                     echo $this->pagination->create_links();
                                 ?>
+                               
                               </div>
            
             

@@ -84,7 +84,7 @@
               <div class="probootstrap-media-image" style="background-image: url(assets/images/img_2.jpg)">
               </div>
               <div class="media-body">
-                <span class="text-uppercase">Murai Batu</span>
+                <span class="text-uppercase">Kenari Yorkshire</span>
                 <h5 class="mb-3">Cicuk</h5>
                   <p>Jenis    : </p><br/>
                   <p>Jenis    : </p><br/>
@@ -98,7 +98,7 @@
               <div class="probootstrap-media-image" style="background-image: url(assets/images/img_4.jpg)">
               </div>
               <div class="media-body">
-                <span class="text-uppercase">Kenari Yorkshire</span>
+                <span class="text-uppercase">Murai Batu</span>
                 <h5 class="mb-3">Cicuk</h5>
                   <p>Jenis    : </p><br/>
                   <p>Jenis    : </p><br/>
@@ -130,8 +130,15 @@
               </div>
             </div>
 
+           
+                
+                
+
+          </div>
+            <div class="col-md-6">
+            
             <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
-              <div class="probootstrap-media-image" style="background-image: url(assets/images/img_5.jpg)">
+              <div class="probootstrap-media-image" style="background-image: url(assets/images/img_4.jpg)">
               </div>
               <div class="media-body">
                 <span class="text-uppercase">Lovebird</span>
@@ -140,8 +147,7 @@
                   <p>Jenis    : </p><br/>
               </div>
             </div>
-
-          </div>
+            </div>
         </div>
       </div>
     </section>
@@ -187,7 +193,7 @@
                     foreach($user as $u){ 
                 ?>
           <div class="col-md-6  probootstrap-animate">
-            <form action="<?php echo base_url(). 'Email/sendMail'; ?>" method="post" class="probootstrap-form probootstrap-form-box mb60">
+            <form action="<?php echo base_url(). 'User/go_book'; ?>" method="post" class="probootstrap-form probootstrap-form-box mb60">
               <div class="row mb-3">
                 <div class="col-md-6">
                   <div class="form-group">
@@ -208,15 +214,14 @@
               </div>
               <div class="form-group">
                 <label for="message" class="sr-only sr-only-focusable">Catatan</label>
-                <textarea cols="30" rows="10" class="form-control" id="message" name="message" placeholder="Catatan"></textarea>
+                <textarea cols="30" rows="10" class="form-control" id="message" name="catatan" placeholder="Catatan"></textarea>
               </div>
               <div class="form-group">
                   <input type="hidden" name="email" value="<?php echo $u->email ?>" required>
                   <input type="hidden" name="phone" value="<?php echo $u->phone ?>" required>
                   <input type="hidden" name="tanggal" value="<?php echo date("Y-m-d") ?>" required>
                   <input type="hidden" name="nama" value="<?php echo $u->nama ?>" required>
-                  <input type="hidden" name="status" value="waiting" required>
-                  <input type="hidden" name="nama" value="ssXS-2017" required>
+                  <input type="hidden" name="status" value="Waiting" required>
                 <input type="submit" class="btn btn-primary" id="submit" name="submit" value="Book Now">
               </div>
             </form>

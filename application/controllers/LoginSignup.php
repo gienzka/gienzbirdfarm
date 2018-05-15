@@ -54,7 +54,7 @@ class LoginSignup extends CI_Controller {
             $data['user'] = $this->CrudModel->cek_data("gbf_user",$where)->result();
             foreach ($data['user'] as $u){
                 if($u->access > 0){
-                    redirect(base_url().'Welcome/userprofile');
+                    redirect(base_url().'Welcome/homelogin');
                 } else {
                     redirect(base_url().'Welcome/admin');
                 }
