@@ -46,13 +46,16 @@
     <!-- END nav -->
     
 
-    
+    <?php 
+                                        $no = 1;
+                                        foreach($user as $u){ 
+    ?>
    <section class="probootstrap-cover overflow-hidden relative"  style="background-image: url('<?php echo base_url().'assets/images/babybird.JPG'; ?>');" data-stellar-background-ratio="0.5" id="section-home">
       <div class="overlay"></div>
       <div class="container">
         <div class="row align-items-center text-center">
           <div class="col-md">
-            <h2 class="heading mb-2 display-4 font-light probootstrap-animate">Hallo!</h2>
+            <h2 class="heading mb-2 display-4 font-light probootstrap-animate">Hallo! <?php echo $u->nama ?></h2>
             <p class="lead mb-5 probootstrap-animate">Selamat datang di GienzBirdFarm, silahkan pilih burung keinginan anda</p>
             
           </div> 
@@ -60,7 +63,7 @@
       </div>
     
     </section> 
-    
+     <?php } ?>
  <section class="probootstrap_section" id="section-city-guides" >
       <div class="container" >
         <!-- <div class="row text-center mb-5 probootstrap-animate">
@@ -79,13 +82,13 @@
           </div>
           <div class="col-lg-4 col-md-6 probootstrap-animate mb-3">
             <a href="<?php echo base_url(). 'Welcome/book'; ?>" class="probootstrap-thumbnail">
-              <img src="<?php echo base_url(). 'assets/images/img_2.jpg'; ?>" alt="Free Template by uicookies.com" class="img-fluid">
+              <img src="<?php echo base_url(). 'assets/images/lovebirdaw.jpg'; ?>" alt="Free Template by uicookies.com" class="img-fluid">
               <h3>Lovebird</h3>
             </a>
           </div>
           <div class="col-lg-4 col-md-6 probootstrap-animate mb-3">
             <a href="<?php echo base_url(). 'Welcome/book'; ?>" class="probootstrap-thumbnail">
-              <img src="<?php echo base_url(). 'assets/images/img_3.jpg'; ?>" alt="Free Template by uicookies.com" class="img-fluid">
+              <img src="<?php echo base_url(). 'assets/images/kenariaw.jpg'; ?>" alt="Free Template by uicookies.com" class="img-fluid">
               <h3>Kenari Yorkshire</h3>
             </a>
           </div>

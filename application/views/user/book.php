@@ -70,24 +70,32 @@
           <div class="col-md-6">
 
             <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
-              <div class="probootstrap-media-image" style="background-image: url(assets/images/img_1.jpg)">
+              <div class="probootstrap-media-image" style="background-image: url(<?php echo base_url().'assets/images/murai11.jpg'; ?>)">
               </div>
               <div class="media-body">
                 <span class="text-uppercase">Murai Batu</span>
-                <h5 class="mb-3">Cicuk</h5>
-                  <p>Jenis    : </p><br/>
-                  <p>Jenis    : </p><br/>
+                <h5 class="mb-3">Cokodon</h5>
+                  <p>
+                    Jenis      : Murai Batu Jawa<br/>
+                    Kelamin    : Jantan<br/>
+                    Prestasi   : Juara 4 Sejawatimur<br/>
+                  </p>
+                  <p>Bulu berwarna biru metalik dengan suara panjang nafas mencapai 1 menit dalam satu tarikan</p><br/>
               </div>
             </div>
 
             <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
-              <div class="probootstrap-media-image" style="background-image: url(assets/images/img_2.jpg)">
+              <div class="probootstrap-media-image" style="background-image: url(<?php echo base_url().'assets/images/kenari11.jpg'; ?>)">
               </div>
               <div class="media-body">
-                <span class="text-uppercase">Murai Batu</span>
-                <h5 class="mb-3">Cicuk</h5>
-                  <p>Jenis    : </p><br/>
-                  <p>Jenis    : </p><br/>
+                <span class="text-uppercase">Kenari Yorkshire</span>
+                <h5 class="mb-3">Cungcung</h5>
+                  <p>
+                    Jenis      : Kenari Yorkshire Belanda<br/>
+                    Kelamin    : Jantan<br/>
+                    Prestasi   : Kenari Merdu<br/>
+                  </p>
+                  <p>Bulu berwarna biru metalik dengan suara panjang nafas mencapai 1 menit dalam satu tarikan</p><br/>
               </div>
             </div>
 
@@ -95,24 +103,32 @@
           <div class="col-md-6">
             
             <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
-              <div class="probootstrap-media-image" style="background-image: url(assets/images/img_4.jpg)">
+              <div class="probootstrap-media-image" style="background-image: url(<?php echo base_url().'assets/images/murai11.jpg'; ?>)">
               </div>
               <div class="media-body">
-                <span class="text-uppercase">Kenari Yorkshire</span>
+                <span class="text-uppercase">Murai Batu</span>
                 <h5 class="mb-3">Cicuk</h5>
-                  <p>Jenis    : </p><br/>
-                  <p>Jenis    : </p><br/>
+                  <p>
+                    Jenis      : Murai Batu Spesial<br/>
+                    Kelamin    : Betina<br/>
+                    Prestasi   : -<br/>
+                  </p>
+                  <p>Bulu berwarna biru metalik dengan suara panjang nafas mencapai 1 menit dalam satu tarikan</p><br/>
               </div>
             </div>
 
             <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
-              <div class="probootstrap-media-image" style="background-image: url(assets/images/img_5.jpg)">
+              <div class="probootstrap-media-image" style="background-image: url(<?php echo base_url().'assets/images/kenari11.jpg'; ?>)">
               </div>
               <div class="media-body">
                 <span class="text-uppercase">Kenari Yorkshire</span>
-                <h5 class="mb-3">Cicuk</h5>
-                  <p>Jenis    : </p><br/>
-                  <p>Jenis    : </p><br/>
+                <h5 class="mb-3">Cuprit</h5>
+                  <p>
+                    Jenis      : Kenari Yorkshire Inggris<br/>
+                    Kelamin    : Betina<br/>
+                    Prestasi   : -<br/>
+                  </p>
+                  <p>Bulu berwarna biru metalik dengan suara panjang nafas mencapai 1 menit dalam satu tarikan</p><br/>
               </div>
             </div>
 
@@ -120,28 +136,42 @@
             <div class="col-md-6">
             
             <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
-              <div class="probootstrap-media-image" style="background-image: url(assets/images/img_4.jpg)">
+              <div class="probootstrap-media-image" style="background-image: url(<?php echo base_url().'assets/images/love11.jpg'; ?>)">
               </div>
               <div class="media-body">
                 <span class="text-uppercase">Lovebird</span>
-                <h5 class="mb-3">Cicuk</h5>
-                  <p>Jenis    : </p><br/>
-                  <p>Jenis    : </p><br/>
+                <h5 class="mb-3">Beni</h5>
+                  <p>
+                    Jenis      : Lovebird Afrika<br/>
+                    Kelamin    : Jantan<br/>
+                    Prestasi   : -<br/>
+                  </p>
+                  <p>Bulu berwarna biru metalik dengan suara panjang nafas mencapai 1 menit dalam satu tarikan</p><br/>
               </div>
             </div>
 
-            <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
-              <div class="probootstrap-media-image" style="background-image: url(assets/images/img_5.jpg)">
-              </div>
-              <div class="media-body">
-                <span class="text-uppercase">Lovebird</span>
-                <h5 class="mb-3">Cicuk</h5>
-                  <p>Jenis    : </p><br/>
-                  <p>Jenis    : </p><br/>
-              </div>
-            </div>
+           
+                
+                
 
           </div>
+            <div class="col-md-6">
+            
+            <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
+              <div class="probootstrap-media-image" style="background-image: url(<?php echo base_url().'assets/images/love11.jpg'; ?>)">
+              </div>
+              <div class="media-body">
+                <span class="text-uppercase">Lovebird</span>
+                <h5 class="mb-3">Prukutuk</h5>
+                  <p>
+                    Jenis      : Lovebird Alaska<br/>
+                    Kelamin    : Betina<br/>
+                    Prestasi   : -<br/>
+                  </p>
+                  <p>Bulu berwarna biru metalik dengan suara panjang nafas mencapai 1 menit dalam satu tarikan</p><br/>
+              </div>
+            </div>
+            </div>
         </div>
       </div>
     </section>
@@ -187,7 +217,7 @@
                     foreach($user as $u){ 
                 ?>
           <div class="col-md-6  probootstrap-animate">
-            <form action="<?php echo base_url(). 'Email/sendMail'; ?>" method="post" class="probootstrap-form probootstrap-form-box mb60">
+            <form action="<?php echo base_url(). 'User/go_book'; ?>" method="post" class="probootstrap-form probootstrap-form-box mb60">
               <div class="row mb-3">
                 <div class="col-md-6">
                   <div class="form-group">
@@ -204,19 +234,23 @@
               </div>
               <div class="form-group">
                 <label for="email" class="sr-only sr-only-focusable">Jenis Burung</label>
-                <input type="text" class="form-control" id="email" name="jenis" placeholder="Jenis Burung">
+                    <select class="form-control" name="jenis" placeholder="Pilih Jenis Burung">
+                        <option value="" disabled selected>Pilih Jenis Burung :</option>
+                        <option value="Murai Batu">Murai Batu</option>
+                        <option value="Kenari Yorkshire">Kenari Yorkshire</option>
+                        <option value="Lovebird">Lovebird</option>
+                    </select>
               </div>
               <div class="form-group">
                 <label for="message" class="sr-only sr-only-focusable">Catatan</label>
-                <textarea cols="30" rows="10" class="form-control" id="message" name="message" placeholder="Catatan"></textarea>
+                <textarea cols="30" rows="10" class="form-control" id="message" name="catatan" placeholder="Catatan"></textarea>
               </div>
               <div class="form-group">
                   <input type="hidden" name="email" value="<?php echo $u->email ?>" required>
                   <input type="hidden" name="phone" value="<?php echo $u->phone ?>" required>
                   <input type="hidden" name="tanggal" value="<?php echo date("Y-m-d") ?>" required>
                   <input type="hidden" name="nama" value="<?php echo $u->nama ?>" required>
-                  <input type="hidden" name="status" value="waiting" required>
-                  <input type="hidden" name="nama" value="ssXS-2017" required>
+                  <input type="hidden" name="status" value="Unconfirmed" required>
                 <input type="submit" class="btn btn-primary" id="submit" name="submit" value="Book Now">
               </div>
             </form>

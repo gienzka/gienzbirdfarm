@@ -61,7 +61,6 @@
             <p class="probootstrap-animate">
                 <a href="#section-feature-testimonial" class="btn btn-primary p-3 mr-3 pl-5 pr-5 text-uppercase d-lg-inline d-md-inline d-sm-block d-block mb-3">Profil GBF</a>
                 <a href="#prestasi" class="btn btn-primary p-3 mr-3 pl-5 pr-5 text-uppercase d-lg-inline d-md-inline d-sm-block d-block mb-3">Prestasi GBF</a>
-                <a href="" class="btn btn-primary p-3 mr-3 pl-5 pr-5 text-uppercase d-lg-inline d-md-inline d-sm-block d-block mb-3">Visi Misi</a>
             </p>
           </div> 
         </div>
@@ -78,11 +77,10 @@
             <blockquote class="">
               <p class="lead mb-4"><em>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</em></p>
               <p class="probootstrap-author">
-                <a href="https://uicookies.com/" target="_blank">
-                  <img src="assets/images/person_1.jpg" alt="Free Template by uicookies.com" class="rounded-circle">
-                  <span class="probootstrap-name">James Smith</span>
-                  <span class="probootstrap-title">Chief Executive Officer</span>
-                </a>
+               
+                  <span class="probootstrap-name">Gienz Bird Farm</span>
+                  <span class="probootstrap-title">The best bird breeder</span>
+            
               </p>
             </blockquote>
 
@@ -100,48 +98,28 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6">
-
-            <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
-              <div class="probootstrap-media-image" style="background-image: url(<?php echo base_url().'assets/images/gal1.jpg'; ?>)">
-              </div>
-              <div class="media-body">
-                <h5 class="mb-3">Juara I Kenari Ranjau</h5>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-              </div>
-            </div>
-
-            <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
-              <div class="probootstrap-media-image" style="background-image: url(<?php echo base_url().'assets/images/gal1.jpg'; ?>)">
-              </div>
-              <div class="media-body">
-                <h5 class="mb-3">Juara III Piala Presiden</h5>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-              </div>
-            </div>
-
-          </div>
-          <div class="col-md-6">
+         
+            <?php 
+                 $no = 1;
+                 foreach($trophy as $t){ 
+             ?>
             
-            <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
-              <div class="probootstrap-media-image" style="background-image: url(<?php echo base_url().'assets/images/gal1.jpg'; ?>)">
-              </div>
-              <div class="media-body">
-                <h5 class="mb-3">Runner-Up FA Cup 2019</h5>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-              </div>
-            </div>
+            <div class="col-md-6">
 
             <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
-              <div class="probootstrap-media-image" style="background-image: url(<?php echo base_url().'assets/images/gal1.jpg'; ?>)">
+              <div class="probootstrap-media-image" style="background-image: url(<?php echo base_url().$t->photo ?>)">
               </div>
               <div class="media-body">
-                <h5 class="mb-3">Best Skin Canary</h5>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+                <h5 class="mb-3"><?php echo $t->judul ?></h5>
+                <p><?php echo $t->deskripsi ?></p>
               </div>
             </div>
-
           </div>
+            
+            <?php } ?>
+            <?php 
+                echo $this->pagination->create_links();
+            ?>
         </div>
       </div>
     </section>
