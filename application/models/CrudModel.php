@@ -68,4 +68,16 @@ class CrudModel extends CI_Model{
 	function jumlah_data($table){
 		return $this->db->get($table)->num_rows();
 	}
+    
+    public function getHistory($table,$number,$offset,$where) {
+        $this->db->where($where);
+        $this->db->order_by("tanggal", "asc");
+        return $query = $this->db->get($table, $number,$offset)->result();   
+    }
+    function search($keyword, $kolom, $table)
+    {
+        $this->db->like($kolom,$keyword);
+        $query  =   $this->db->get($table);
+        return $query->result();
+    }
 }

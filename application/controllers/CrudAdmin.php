@@ -9,6 +9,38 @@ class CrudAdmin extends CI_Controller {
         $this->load->helper("file");
  	} 
     
+    
+     // ------------------------------------------------- user --------------------------------------
+    function update(){
+            $nama = $this->input->post('nama');
+            $phone = $this->input->post('phone');
+            $address = $this->input->post('address');
+            $email = $this->input->post('email');
+
+            $data = array(
+                'nama' => $nama,
+                'phone' => $phone,
+                'address' => $address
+            );
+
+            $where = array(
+			'email' => $email
+			);
+
+            $this->CrudModel->update_data($data, 'gbf_user', $where );
+            redirect(base_url().'Welcome/userdata');
+        }
+    function delete(){
+            $email = $this->input->post('email');
+            $table = $this->input->post('table');
+            $where = array(
+			'email' => $email
+			);
+
+            $this->CrudModel->delete_data($table, $where );
+                redirect(base_url().'Welcome/userdata');
+        }
+     // ------------------------------------------------- GALLERY --------------------------------------
     function uploadgallery(){
         $id = $this->input->post('id');
         $judul = $this->input->post('judul');
@@ -39,26 +71,6 @@ class CrudAdmin extends CI_Controller {
         }
     }
     
-    function update(){
-            $nama = $this->input->post('nama');
-            $phone = $this->input->post('phone');
-            $address = $this->input->post('address');
-            $email = $this->input->post('email');
-
-            $data = array(
-                'nama' => $nama,
-                'phone' => $phone,
-                'address' => $address
-            );
-
-            $where = array(
-			'email' => $email
-			);
-
-            $this->CrudModel->update_data($data, 'gbf_user', $where );
-            redirect(base_url().'Welcome/userdata');
-        }
-    
     function updategallery(){
             $id = $this->input->post('id');
             $judul = $this->input->post('judul');
@@ -77,16 +89,7 @@ class CrudAdmin extends CI_Controller {
             redirect(base_url().'Welcome/gallery');
         }
 
-    function delete(){
-            $email = $this->input->post('email');
-            $table = $this->input->post('table');
-            $where = array(
-			'email' => $email
-			);
-
-            $this->CrudModel->delete_data($table, $where );
-                redirect(base_url().'Welcome/userdata');
-        }
+    
     
     function deletegallery(){
             $id = $this->input->post('id');
@@ -103,7 +106,7 @@ class CrudAdmin extends CI_Controller {
             $this->CrudModel->delete_data($table, $where );
             redirect(base_url().'Welcome/gallery');
         }
-    
+     // ------------------------------------------------- NEWS --------------------------------------
     function deletenews(){
         $id = $this->input->post('id');
             $where = array(
@@ -199,4 +202,172 @@ class CrudAdmin extends CI_Controller {
         }
     }
     
+    // ------------------------------------------------- BOOKING --------------------------------------
+    
+    function confirmed()
+    {
+        $kode = $this->input->post('kode');
+        $harga = $this->input->post('harga');
+        $data = array(
+                'harga' => $harga,
+                'status' => 'Unpaid'
+            );
+        $where = array(
+			'kode' => $kode
+			);
+            $table = 'gbf_book';
+        $this->CrudModel->update_data($data, $table, $where );
+        redirect(base_url().'Welcome/adminbook');
+    }
+    
+    function paided()
+    {
+        $kode = $this->input->post('kode');
+        $data = array(
+                'status' => 'Waiting-For-Bird'
+            );
+        $where = array(
+			'kode' => $kode
+			);
+            $table = 'gbf_book';
+        $this->CrudModel->update_data($data, $table, $where );
+        redirect(base_url().'Welcome/adminbook');
+    }
+    
+    function endbook()
+    {
+        $kode = $this->input->post('kode');
+        $email = $this->input->post('email');
+        $tanggal = $this->input->post('tanggal');
+        $jenis = $this->input->post('jenis');
+        $indukJ = $this->input->post('indukJ');
+        $indukB = $this->input->post('indukB');
+        $harga = $this->input->post('harga');
+        
+        $data = array(
+                'kode' => $kode,
+                'email' => $email,
+                'tanggal' => $tanggal,
+                'jenis' => $jenis,
+                'indukJ' => $indukJ,
+                'indukB' => $indukB,
+                'harga' => $harga
+            );
+        
+        $this->CrudModel->input_data($data, 'gbf_history');
+        redirect(base_url().'Welcome/adminbook');
+    }
+    
+    function updatebook()
+    {
+        $kode = $this->input->post('kode');
+        $harga = $this->input->post('harga');
+        $jenis = $this->input->post('jenis');
+        $indukJ = $this->input->post('indukJ');
+        $indukB = $this->input->post('indukB');
+        
+        $data = array(
+                'jenis' => $jenis,
+                'indukJ' => $indukJ,
+                'indukB' => $indukB,
+                'harga' => $harga
+            );
+        $where = array(
+			'kode' => $kode
+			);
+            $table = 'gbf_book';
+        $this->CrudModel->update_data($data, $table, $where );
+        redirect(base_url().'Welcome/adminbook');
+    }
+    
+    function deletebook()
+    {
+            $kode = $this->input->post('kode');
+        
+            $where = array(
+			'kode' => $kode
+			);
+            $table = 'gbf_book';
+            
+            $this->CrudModel->delete_data($table, $where );
+            redirect(base_url().'Welcome/adminbook');
+    }
+    
+    // ------------------------------------------------- TROPHY --------------------------------------
+    
+    function uploadtrophy(){
+        $id = $this->input->post('id');
+        $judul = $this->input->post('judul');
+        $deskripsi = $this->input->post('deskripsi');
+        $photo = 'assets/images/gbftrophy/' . basename($_FILES["filetoupload"]["name"]);
+        
+        $data = array(
+                'id' => $id,
+                'judul' => $judul,
+                'deskripsi' => $deskripsi,
+                'photo' => $photo
+            );
+        
+        $this->CrudModel->input_data($data, 'gbf_trophy');
+        
+        $config['upload_path']          = './assets/images/gbftrophy/';
+		$config['allowed_types']        = 'jpg|png';
+		$config['max_size']             = 100000;
+ 
+		// load library upload
+        $this->load->library('upload', $config);
+        if (!$this->upload->do_upload('filetoupload')) {
+            $error = $this->upload->display_errors();
+            // menampilkan pesan error
+            print_r($error);
+        } else {
+           redirect(base_url().'Welcome/trophy');
+        }
+    }
+    
+    function updatetrophy(){
+            $id = $this->input->post('id');
+            $judul = $this->input->post('judul');
+            $deskripsi = $this->input->post('deskripsi');
+
+            $data = array(
+                'judul' => $judul,
+                'deskripsi' => $deskripsi
+            );
+
+            $where = array(
+			'id' => $id
+			);
+
+            $this->CrudModel->update_data($data, 'gbf_trophy', $where );
+            redirect(base_url().'Welcome/trophy');
+        }
+
+    
+    function deletetrophy(){
+            $id = $this->input->post('id');
+            $where = array(
+			'id' => $id
+			);
+            $table = 'gbf_trophy';
+            
+            $data['trophy'] = $this->CrudModel->cek_data($table,$where)->result();
+            foreach ($data['trophy'] as $g){
+                $file = $g->photo;
+                delete_files($file);
+            }
+            $this->CrudModel->delete_data($table, $where );
+            redirect(base_url().'Welcome/trophy');
+        }
+    
+    function search_keyword()
+    {
+        $keyword    =   $this->input->post('keyword');
+        $this->load->database();
+            $jumlah_data = $this->CrudModel->jumlah_data('gbf_history');
+            $this->load->library('pagination');
+           	
+        $data  =   $this->CrudModel->search($keyword,'kode','gbf_history');
+        $this->load->view('admin/admin',array('data' => $data));
+    }
 }

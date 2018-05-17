@@ -77,5 +77,50 @@ class User extends CI_Controller {
             redirect(base_url().'Welcome/userprofile');
     }
     
+    function go_book()
+    {
+            $email = $this->input->post('email');
+            $phone = $this->input->post('phone');
+            $nama = $this->input->post('nama');
+            $tanggal = $this->input->post('tanggal');
+            $status = $this->input->post('status');
+            $indukJ = $this->input->post('indukJ');
+            $indukB = $this->input->post('indukB');
+            $catatan = $this->input->post('catatan');
+            $jenis = $this->input->post('jenis');
+            
+            $kode1 = substr($email,0,2); 
+            $kode2 = substr($nama,1,3);
+            $kode4 = date("d") . date("m") . date("Y");
+            $kode3 = rand(100,999);
+            $kode = $kode1 . $kode2 . $kode3 . $kode4;
+
+            $data = array(
+                'nama' => $nama,
+                'phone' => $phone,
+                'tanggal' => $tanggal,
+                'status' => $status,
+                'email' => $email,
+                'kode' => $kode,
+                'indukJ' => $indukJ,
+                'indukB' => $indukB,
+                'catatan' => $catatan,
+                'jenis' => $jenis,
+            );
+
+            $this->CrudModel->input_data($data, 'gbf_book');
+            redirect(base_url().'Welcome/history');
+    }
+    
+    function cancelbook()
+    {
+        $kode = $this->input->post('kode');
+            $where = array(
+			'kode' => $kode
+			);
+            $table = 'gbf_book';
+        $this->CrudModel->delete_data($table, $where );
+        redirect(base_url().'Welcome/history');
+    }
     
 }

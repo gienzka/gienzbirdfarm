@@ -79,13 +79,13 @@
           </div>
           <div class="col-lg-4 col-md-6 probootstrap-animate mb-3">
             <a href="#" class="probootstrap-thumbnail">
-              <img src="<?php echo base_url(). 'assets/images/img_2.jpg'; ?>" alt="Free Template by uicookies.com" class="img-fluid">
+              <img src="<?php echo base_url(). 'assets/images/lovebirdaw.jpg'; ?>" alt="Free Template by uicookies.com" class="img-fluid">
               <h3>Lovebird</h3>
             </a>
           </div>
           <div class="col-lg-4 col-md-6 probootstrap-animate mb-3">
             <a href="#" class="probootstrap-thumbnail">
-              <img src="<?php echo base_url(). 'assets/images/img_3.jpg'; ?>" alt="Free Template by uicookies.com" class="img-fluid">
+              <img src="<?php echo base_url(). 'assets/images/kenariaw.jpg'; ?>" alt="Free Template by uicookies.com" class="img-fluid">
               <h3>Kenari Yorkshire</h3>
             </a>
           </div>

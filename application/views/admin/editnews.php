@@ -202,7 +202,7 @@
               <!-- sidebar menu start -->
               <ul class="sidebar-menu" id="nav-accordion">
               
-              	  <p class="centered"><a href="profile.html"><img height="100px" width="100px" src="<?php echo base_url(). 'assets/images/gbf1.png'; ?>"></a></p>
+              	 <p class="centered"><a href="profile.html"><img height="100px" width="100px" src="<?php echo base_url(). 'assets/images/gbf1.png'; ?>"></a></p>
               	  <h5 class="centered">GBF Crew</h5>
               	  	
                   <li class="mt">
@@ -219,48 +219,31 @@
                       </a>
                   </li>
 
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
+                <li class="sub-menu">
+                      <a  href="<?php echo base_url(). 'Welcome/adminbook'; ?>">
                           <i class="fa fa-cogs"></i>
                           <span>GBF Booking</span>
                       </a>
-                      <ul class="sub">
-                          <li><a  href="calendar.html">Calendar</a></li>
-                          <li><a  href="gallery.html">Gallery</a></li>
-                          <li><a  href="todo_list.html">Todo List</a></li>
-                      </ul>
                   </li>
                   <li class="sub-menu">
-                      <a class="active" href="<?php echo base_url(). 'Welcome/addnews'; ?>" >
+                      <a  class="active" href="<?php echo base_url(). 'Welcome/addnews'; ?>" >
                           <i class="fa fa-book"></i>
                           <span>GBF News</span>
                       </a>
                   </li>
                   <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a  href="<?php echo base_url(). 'Welcome/trophy'; ?>" >
                           <i class="fa fa-tasks"></i>
                           <span>GBF Trophy</span>
                       </a>
-                      <ul class="sub">
-                          <li><a  href="form_component.html">Form Components</a></li>
-                      </ul>
                   </li>
                   <li class="sub-menu">
-                      <a href="<?php echo base_url(). 'Welcome/gallery'; ?>" >
+                      <a  href="<?php echo base_url(). 'Welcome/gallery'; ?>" >
                           <i class="fa fa-th"></i>
                           <span>GBF Gallery</span>
                       </a>
                   </li>
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class=" fa fa-bar-chart-o"></i>
-                          <span>GBF Birds</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="morris.html">Morris</a></li>
-                          <li><a  href="chartjs.html">Chartjs</a></li>
-                      </ul>
-                  </li>
+                  
 
               </ul>
               <!-- sidebar menu end -->

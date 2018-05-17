@@ -44,18 +44,27 @@ class LoginSignup extends CI_Controller {
 			);
 		$cek = $this->CrudModel->cek_data("gbf_user",$where)->num_rows();
 		if($cek > 0){
-            
-			$data_session = array(
-				'email' => $email,
-				'status' => "login"
-				);
- 
-			$this->session->set_userdata($data_session);
+    
             $data['user'] = $this->CrudModel->cek_data("gbf_user",$where)->result();
             foreach ($data['user'] as $u){
+                
                 if($u->access > 0){
-                    redirect(base_url().'Welcome/userprofile');
+                    
+                    $data_session = array(
+                        'email' => $email,
+                        'status' => "login"
+                    );
+ 
+			         $this->session->set_userdata($data_session);
+                    
+                    redirect(base_url().'Welcome/homelogin');
                 } else {
+                     $data_session = array(
+                        'email' => $email,
+                        'status' => "admin"
+                    );
+ 
+			         $this->session->set_userdata($data_session);
                     redirect(base_url().'Welcome/admin');
                 }
             }

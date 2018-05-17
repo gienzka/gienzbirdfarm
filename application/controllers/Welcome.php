@@ -9,13 +9,42 @@ class Welcome extends CI_Controller {
  	}
 	public function index()
 	{
+        $this->load->database();
+            $jumlah_data = $this->CrudModel->jumlah_data('gbf_news');
+            $this->load->library('pagination');
+            $config['base_url'] = base_url().'Welcome/index/';
+            $config['total_rows'] = $jumlah_data;
+            $config['per_page'] = 4;
+            $from = $this->uri->segment(3);
+            $this->pagination->initialize($config);		
         
-        $data['gallery'] = $this->CrudModel->viewgallery()->result();
+        $news = $this->CrudModel->data('gbf_news',$config['per_page'],$from);
+        $gallery = $this->CrudModel->viewgallery()->result();
+        
+        $data = array(
+                'news' => $news,
+                'gallery' => $gallery
+            );
+
+        
 		$this->load->view('index',$data);
 	}
+    
+    //------------------------------------------------- DEPAN ----------------------------------------------
+    
     public function profile()
 	{
-		$this->load->view('depan/profile');
+            $this->load->database();
+            $jumlah_data = $this->CrudModel->jumlah_data('gbf_trophy');
+            $this->load->library('pagination');
+            $config['base_url'] = base_url().'Welcome/index/';
+            $config['total_rows'] = $jumlah_data;
+            $config['per_page'] = 6;
+            $from = $this->uri->segment(3);
+            $this->pagination->initialize($config);		
+            $data['trophy'] = $this->CrudModel->data('gbf_trophy',$config['per_page'],$from);
+        
+        $this->load->view('depan/profile', $data);
 	}
     public function login()
 	{
@@ -37,87 +66,232 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('errormessage/loginerr');
 	}
+    public function readnews()
+	{
+		$id = $this->input->post('id');
+            $where = array(
+			'id' => $id
+			);
+            $table = 'gbf_news';
+        $data['news'] = $this->CrudModel->viewdb($table,$where)->result();
+        $this->load->view('depan/readnews', $data);
+	}
+    
+    //------------------------------------------------- ADMIN ----------------------------------------------
+    
     public function admin()
 	{
-		$this->load->view('admin/admin');
+        if($this->session->userdata('status') == "admin"){
+		    $this->load->database();
+            $jumlah_data = $this->CrudModel->jumlah_data('gbf_history');
+            $this->load->library('pagination');
+            $config['base_url'] = base_url().'Welcome/index/';
+            $config['total_rows'] = $jumlah_data;
+            $config['per_page'] = 10;
+            $from = $this->uri->segment(3);
+            $this->pagination->initialize($config);		
+            $data['data'] = $this->CrudModel->data('gbf_history',$config['per_page'],$from);
+        
+        $this->load->view('admin/admin', $data);
+        } else{
+            redirect(base_url());
+        }
 	}
     public function userdata()
 	{
-        $this->load->database();
-		$jumlah_data = $this->CrudModel->jumlah_data('gbf_user');
-		$this->load->library('pagination');
-		$config['base_url'] = base_url().'Welcome/index/';
-		$config['total_rows'] = $jumlah_data;
-		$config['per_page'] = 20;
-		$from = $this->uri->segment(3);
-		$this->pagination->initialize($config);		
-		$user = $this->CrudModel->data('gbf_user',$config['per_page'],$from);
-        $admin = $this->CrudModel->viewadmin()->result();
+        if($this->session->userdata('status') == "admin"){
+            $this->load->database();
+            $jumlah_data = $this->CrudModel->jumlah_data('gbf_user');
+            $this->load->library('pagination');
+            $config['base_url'] = base_url().'Welcome/index/';
+            $config['total_rows'] = $jumlah_data;
+            $config['per_page'] = 20;
+            $from = $this->uri->segment(3);
+            $this->pagination->initialize($config);		
+            $user = $this->CrudModel->data('gbf_user',$config['per_page'],$from);
+            $admin = $this->CrudModel->viewadmin()->result();
+
+            $data = array(
+                'user' => $user,
+                'admin' => $admin
+            );
+
+            $this->load->view('admin/userdata', $data);
+            
+        } else{
+            redirect(base_url());
+        }
         
-        $data = array(
-            'user' => $user,
-            'admin' => $admin
-        );
-        
-		$this->load->view('admin/userdata', $data);
+	}
+     public function trophy()
+	{
+        if($this->session->userdata('status') == "admin"){
+            $this->load->database();
+            $jumlah_data = $this->CrudModel->jumlah_data('gbf_trophy');
+            $this->load->library('pagination');
+            $config['base_url'] = base_url().'Welcome/index/';
+            $config['total_rows'] = $jumlah_data;
+            $config['per_page'] = 20;
+            $from = $this->uri->segment(3);
+            $this->pagination->initialize($config);		
+            $data['trophy'] = $this->CrudModel->data('gbf_trophy',$config['per_page'],$from);
+            $this->load->view('admin/trophy',$data);
+        } else{
+            redirect(base_url());
+        }
 	}
     public function gallery()
 	{
-        $this->load->database();
-		$jumlah_data = $this->CrudModel->jumlah_data('gbf_gallery');
-		$this->load->library('pagination');
-		$config['base_url'] = base_url().'Welcome/index/';
-		$config['total_rows'] = $jumlah_data;
-		$config['per_page'] = 20;
-		$from = $this->uri->segment(3);
-		$this->pagination->initialize($config);		
-		$data['gallery'] = $this->CrudModel->data('gbf_gallery',$config['per_page'],$from);
-        $this->load->view('admin/gallery',$data);
+        if($this->session->userdata('status') == "admin"){
+            $this->load->database();
+            $jumlah_data = $this->CrudModel->jumlah_data('gbf_gallery');
+            $this->load->library('pagination');
+            $config['base_url'] = base_url().'Welcome/index/';
+            $config['total_rows'] = $jumlah_data;
+            $config['per_page'] = 20;
+            $from = $this->uri->segment(3);
+            $this->pagination->initialize($config);		
+            $data['gallery'] = $this->CrudModel->data('gbf_gallery',$config['per_page'],$from);
+            $this->load->view('admin/gallery',$data);
+        } else{
+            redirect(base_url());
+        }
 	}
     public function addnews()
     {
-        $this->load->database();
-		$jumlah_data = $this->CrudModel->jumlah_data('gbf_news');
-		$this->load->library('pagination');
-		$config['base_url'] = base_url().'Welcome/index/';
-		$config['total_rows'] = $jumlah_data;
-		$config['per_page'] = 20;
-		$from = $this->uri->segment(3);
-		$this->pagination->initialize($config);		
-		$data['news'] = $this->CrudModel->data('gbf_news',$config['per_page'],$from);
-        $this->load->view('admin/addnews',$data); 
+        if($this->session->userdata('status') == "admin"){
+            $this->load->database();
+            $jumlah_data = $this->CrudModel->jumlah_data('gbf_news');
+            $this->load->library('pagination');
+            $config['base_url'] = base_url().'Welcome/index/';
+            $config['total_rows'] = $jumlah_data;
+            $config['per_page'] = 20;
+            $from = $this->uri->segment(3);
+            $this->pagination->initialize($config);		
+            $data['news'] = $this->CrudModel->data('gbf_news',$config['per_page'],$from);
+            $this->load->view('admin/addnews',$data);
+        } else{
+            redirect(base_url());
+        }
     }
+    
+     public function adminbook()
+	{
+        if($this->session->userdata('status') == "admin"){
+            
+            $where = array(
+                'status' => 'Unconfirmed'
+                );
+            
+            $where1 = array(
+                'status' => 'Unpaid'
+                );
+            
+            $wherem = array(
+                'status' => 'Waiting-For-Bird',
+                'jenis' => 'Murai Batu'
+                );
+            
+            $wherek = array(
+                'status' => 'Waiting-For-Bird',
+                'jenis' => 'Kenari Yorkshire'
+                );
+            
+            $wherel = array(
+                'status' => 'Waiting-For-Bird',
+                'jenis' => 'Lovebird'
+                );
+            
+            $this->load->database();
+            $jumlah_data = $this->CrudModel->jumlah_data('gbf_book');
+            $this->load->library('pagination');
+            $config['base_url'] = base_url().'Welcome/index/';
+            $config['total_rows'] = $jumlah_data;
+            $config['per_page'] = 10;
+            $from = $this->uri->segment(3);
+            $this->pagination->initialize($config);		
+            $data1 = $this->CrudModel->getHistory('gbf_book',$config['per_page'],$from, $where1);
+            
+            $murai = $this->CrudModel->getHistory('gbf_book',$config['per_page'],$from, $wherem);
+            $kenari = $this->CrudModel->getHistory('gbf_book',$config['per_page'],$from, $wherek);
+            $love = $this->CrudModel->getHistory('gbf_book',$config['per_page'],$from, $wherel);
+            
+            $data = $this->CrudModel->viewdb('gbf_book',$where)->result();
+            
+            $this->load->view('admin/adminbook',array('data' => $data, 'data1' => $data1, 'murai' => $murai, 'kenari' => $kenari, 'love' => $love));
+        } else{
+            redirect(base_url());
+        }
+	}
+    
+    //------------------------------------------------- USER ----------------------------------------------
+    
     public function userprofile()
     {
-        $where = array(
-			'email' => 'yasin.awb@gmail.com',
-			);
-        $data['user'] = $this->CrudModel->viewdb('gbf_user',$where)->result();
-		$this->load->view('user/profile',$data);
+        if($this->session->userdata('status') == "login"){
+            $where = array(
+                'email' => 'yasin.awb@gmail.com',
+                );
+            $data['user'] = $this->CrudModel->viewdb('gbf_user',$where)->result();
+            $this->load->view('user/profile',$data);
+        } else{
+            redirect(base_url());
+        }
     }
     public function homelogin()
 	{
-		$this->load->view('user/homelogin');
+        if($this->session->userdata('status') == "login"){
+		  $email = $this->session->userdata('email');
+            $where = array(
+                'email' => $email,
+                );
+            $data['user'] = $this->CrudModel->viewdb('gbf_user',$where)->result();
+            $this->load->view('user/homelogin',$data);
+        } else{
+            redirect(base_url());
+        }
 	}
     public function history()
 	{
-		$this->load->database();
-		$jumlah_data = $this->CrudModel->jumlah_data('gbf_book');
-		$this->load->library('pagination');
-		$config['base_url'] = base_url().'Welcome/index/';
-		$config['total_rows'] = $jumlah_data;
-		$config['per_page'] = 5;
-		$from = $this->uri->segment(3);
-		$this->pagination->initialize($config);		
-		$data['book'] = $this->CrudModel->data('gbf_book',$config['per_page'],$from);
-        $this->load->view('user/history',$data);
+        if($this->session->userdata('status') == "login"){
+            $email = $this->session->userdata('email');
+            $where = array(
+                'email' => $email,
+                );
+            
+            
+            $this->load->database();
+            $jumlah_data = $this->CrudModel->jumlah_data('gbf_history');
+            $this->load->library('pagination');
+            $config['base_url'] = base_url().'Welcome/index/';
+            $config['total_rows'] = $jumlah_data;
+            $config['per_page'] = 10;
+            $from = $this->uri->segment(3);
+            $this->pagination->initialize($config);		
+            $data1 = $this->CrudModel->getHistory('gbf_history',$config['per_page'],$from, $where);
+            $data = $this->CrudModel->viewdb('gbf_book',$where)->result();
+            $data2 = $this->CrudModel->viewdb('gbf_book',$where)->result();
+            
+            $this->load->view('user/history',array('data' => $data, 'data1' => $data1, 'data2' => $data2));
+        } else{
+            redirect(base_url());
+        }
 	}
+    
     public function book()
 	{
-		$where = array(
-			'email' => 'yasin.awb@gmail.com',
-			);
-        $data['user'] = $this->CrudModel->viewdb('gbf_user',$where)->result();
-		$this->load->view('user/book',$data);
+        if($this->session->userdata('status') == "login"){
+            $email = $this->session->userdata('email');
+            $where = array(
+                'email' => $email,
+                );
+            $data['user'] = $this->CrudModel->viewdb('gbf_user',$where)->result();
+            
+            $this->load->view('user/book',$data);
+        } else{
+            redirect(base_url());
+        }
 	}
+    
+   
 }

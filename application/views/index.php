@@ -327,58 +327,29 @@
           </div>
         </div>
         <div class="row">
+            <?php 
+            foreach($news as $n){ 
+            ?>
           <div class="col-md-6">
 
             <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
-              <div class="probootstrap-media-image" style="background-image: url(assets/images/img_1.jpg)">
+              <div class="probootstrap-media-image" style="background-image: url(<?php echo base_url().$n->photo ?>)">
               </div>
               <div class="media-body">
-                <span class="text-uppercase">January 1st 2018</span>
-                <h5 class="mb-3">Travel To United States Without Visa</h5>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-                <p><a href="#">Read More</a></p>
+                <span class="text-uppercase"><?php echo $n->tanggal ?></span>
+                <h5 class="mb-3"><?php echo $n->judul ?></h5>
+                <p><?php echo substr($n->berita,0,100); ?></p>
+                <p><form action="<?php echo base_url(). 'Welcome/readnews'; ?>" method="post"><input type="hidden" name="id" value="<?php echo $n->id ?>"  required><input type="submit" value="Read More" class="btn btn-primary"></form></p>
               </div>
             </div>
-
-            <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
-              <div class="probootstrap-media-image" style="background-image: url(assets/images/img_2.jpg)">
-              </div>
-              <div class="media-body">
-                <span class="text-uppercase">January 1st 2018</span>
-                <h5 class="mb-3">Travel To United States Without Visa</h5>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-                <p><a href="#">Read More</a></p>
-              </div>
-            </div>
-
           </div>
-          <div class="col-md-6">
-            
-            <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
-              <div class="probootstrap-media-image" style="background-image: url(assets/images/img_4.jpg)">
-              </div>
-              <div class="media-body">
-                <span class="text-uppercase">January 1st 2018</span>
-                <h5 class="mb-3">Travel To United States Without Visa</h5>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-                <p><a href="#">Read More</a></p>
-              </div>
-            </div>
-
-            <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
-              <div class="probootstrap-media-image" style="background-image: url(assets/images/img_5.jpg)">
-              </div>
-              <div class="media-body">
-                <span class="text-uppercase">January 1st 2018</span>
-                <h5 class="mb-3">Travel To United States Without Visa</h5>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-                <p><a href="#">Read More</a></p>
-              </div>
-            </div>
-
-          </div>
+            <?php } ?>
+            <?php 
+                echo $this->pagination->create_links();
+            ?>
         </div>
-      </div>
+        
+      
     </section>
     <!-- END section -->
 
