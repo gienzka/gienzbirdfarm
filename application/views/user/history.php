@@ -89,7 +89,11 @@
                                        <?php 
                                         $no = 1;
                                         foreach($data as $b){ 
+<<<<<<< HEAD
                                     ?>
+=======
+                                        ?>
+>>>>>>> d35e037aca67a2255808fea865e6fd305a4dea1b
                                     <tr>
                                       <th scope="row"><?php echo $no++ ?></th>
                                       <td><?php echo $b->kode ?></td>
@@ -98,7 +102,11 @@
                                       <td><?php echo $b->indukB ?></td>
                                       <td><?php echo $b->catatan ?></td>
                                       <td><?php echo $b->status ?></td>
+<<<<<<< HEAD
                                       <td><form action="<?php echo base_url(). 'User/cancelbook'; ?>" method="post"><input type="hidden" name="kode" value="<?php echo $b->kode ?>"  required><input type="submit" value="Cancel Booking" class="btn btn-primary"></form></td>
+=======
+                                      <td><form action="<?php echo base_url(). 'User/cancelbook'; ?>" method="post"><input type="hidden" name="kode" value="<?php echo $b->kode ?>"  required><input type="submit" value="Cancel Booking" class="class="btn btn-primary p-3 mr-3 pl-5 pr-5 text-uppercase d-lg-inline d-md-inline d-sm-block d-block mb-3""></form></td>
+>>>>>>> d35e037aca67a2255808fea865e6fd305a4dea1b
                                     </tr>
                                       <?php } ?>
                                   </tbody>

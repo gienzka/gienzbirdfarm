@@ -49,6 +49,7 @@ class LoginSignup extends CI_Controller {
             foreach ($data['user'] as $u){
                 
                 if($u->access > 0){
+<<<<<<< HEAD
                     
                     $data_session = array(
                         'email' => $email,
@@ -57,6 +58,8 @@ class LoginSignup extends CI_Controller {
  
 			         $this->session->set_userdata($data_session);
                     
+=======
+>>>>>>> d35e037aca67a2255808fea865e6fd305a4dea1b
                     redirect(base_url().'Welcome/homelogin');
                 } else {
                      $data_session = array(

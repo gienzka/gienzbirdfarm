@@ -70,6 +70,7 @@ class CrudModel extends CI_Model{
 	}
     
     public function getHistory($table,$number,$offset,$where) {
+<<<<<<< HEAD
         $this->db->where($where);
         $this->db->order_by("tanggal", "asc");
         return $query = $this->db->get($table, $number,$offset)->result();   
@@ -80,4 +81,10 @@ class CrudModel extends CI_Model{
         $query  =   $this->db->get($table);
         return $query->result();
     }
+=======
+        $this->db->where("(email = '".$where."')");
+        $this->db->order_by("tanggal", "asc");
+        return $query = $this->db->get($table, $number,$offset)->result();   
+    }
+>>>>>>> d35e037aca67a2255808fea865e6fd305a4dea1b
 }

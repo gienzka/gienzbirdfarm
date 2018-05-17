@@ -81,6 +81,7 @@ class Welcome extends CI_Controller {
     
     public function admin()
 	{
+<<<<<<< HEAD
         if($this->session->userdata('status') == "admin"){
 		    $this->load->database();
             $jumlah_data = $this->CrudModel->jumlah_data('gbf_history');
@@ -93,13 +94,21 @@ class Welcome extends CI_Controller {
             $data['data'] = $this->CrudModel->data('gbf_history',$config['per_page'],$from);
         
         $this->load->view('admin/admin', $data);
+=======
+        if($this->session->userdata('status') == "login"){
+		  $this->load->view('admin/admin');
+>>>>>>> d35e037aca67a2255808fea865e6fd305a4dea1b
         } else{
             redirect(base_url());
         }
 	}
     public function userdata()
 	{
+<<<<<<< HEAD
         if($this->session->userdata('status') == "admin"){
+=======
+        if($this->session->userdata('status') == "login"){
+>>>>>>> d35e037aca67a2255808fea865e6fd305a4dea1b
             $this->load->database();
             $jumlah_data = $this->CrudModel->jumlah_data('gbf_user');
             $this->load->library('pagination');
@@ -122,6 +131,7 @@ class Welcome extends CI_Controller {
             redirect(base_url());
         }
         
+<<<<<<< HEAD
 	}
      public function trophy()
 	{
@@ -143,6 +153,12 @@ class Welcome extends CI_Controller {
     public function gallery()
 	{
         if($this->session->userdata('status') == "admin"){
+=======
+	}
+    public function gallery()
+	{
+        if($this->session->userdata('status') == "login"){
+>>>>>>> d35e037aca67a2255808fea865e6fd305a4dea1b
             $this->load->database();
             $jumlah_data = $this->CrudModel->jumlah_data('gbf_gallery');
             $this->load->library('pagination');
@@ -159,7 +175,11 @@ class Welcome extends CI_Controller {
 	}
     public function addnews()
     {
+<<<<<<< HEAD
         if($this->session->userdata('status') == "admin"){
+=======
+        if($this->session->userdata('status') == "login"){
+>>>>>>> d35e037aca67a2255808fea865e6fd305a4dea1b
             $this->load->database();
             $jumlah_data = $this->CrudModel->jumlah_data('gbf_news');
             $this->load->library('pagination');
@@ -268,11 +288,18 @@ class Welcome extends CI_Controller {
             $config['per_page'] = 10;
             $from = $this->uri->segment(3);
             $this->pagination->initialize($config);		
+<<<<<<< HEAD
             $data1 = $this->CrudModel->getHistory('gbf_history',$config['per_page'],$from, $where);
             $data = $this->CrudModel->viewdb('gbf_book',$where)->result();
             $data2 = $this->CrudModel->viewdb('gbf_book',$where)->result();
             
             $this->load->view('user/history',array('data' => $data, 'data1' => $data1, 'data2' => $data2));
+=======
+            $data1 = $this->CrudModel->getHistory('gbf_history',$config['per_page'],$from, $email);
+            $data = $this->CrudModel->viewdb('gbf_book',$where)->result();
+            
+            $this->load->view('user/history',array('data' => $data, 'data1' => $data1));
+>>>>>>> d35e037aca67a2255808fea865e6fd305a4dea1b
         } else{
             redirect(base_url());
         }
