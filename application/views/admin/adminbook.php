@@ -202,7 +202,15 @@
               <!-- sidebar menu start -->
               <ul class="sidebar-menu" id="nav-accordion">
               
+<<<<<<< HEAD
               	 <p class="centered"><a href="profile.html"><img height="100px" width="100px" src="<?php echo base_url(). 'assets/images/gbf1.png'; ?>"></a></p>
+=======
+<<<<<<< HEAD
+              	 <p class="centered"><a href="profile.html"><img height="100px" width="100px" src="<?php echo base_url(). 'assets/images/gbf1.png'; ?>"></a></p>
+=======
+              	  <p class="centered"><a href="profile.html"><img height="100px" width="100px" src="<?php echo base_url(). 'assets/images/gbf1.png'; ?>"></a></p>
+>>>>>>> d35e037aca67a2255808fea865e6fd305a4dea1b
+>>>>>>> 1616bf1c16798714a9d3f47305e742b2d0be6617
               	  <h5 class="centered">GBF Crew</h5>
               	  	
                   <li class="mt">
@@ -219,6 +227,10 @@
                       </a>
                   </li>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1616bf1c16798714a9d3f47305e742b2d0be6617
                 <li class="sub-menu">
                       <a class="active" href="<?php echo base_url(). 'Welcome/adminbook'; ?>">
                           <i class="fa fa-cogs"></i>
@@ -227,10 +239,32 @@
                   </li>
                   <li class="sub-menu">
                       <a href="<?php echo base_url(). 'Welcome/addnews'; ?>" >
+<<<<<<< HEAD
+=======
+=======
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-cogs"></i>
+                          <span>GBF Booking</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="calendar.html">Calendar</a></li>
+                          <li><a  href="gallery.html">Gallery</a></li>
+                          <li><a  href="todo_list.html">Todo List</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a class="active" href="<?php echo base_url(). 'Welcome/addnews'; ?>" >
+>>>>>>> d35e037aca67a2255808fea865e6fd305a4dea1b
+>>>>>>> 1616bf1c16798714a9d3f47305e742b2d0be6617
                           <i class="fa fa-book"></i>
                           <span>GBF News</span>
                       </a>
                   </li>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1616bf1c16798714a9d3f47305e742b2d0be6617
                  <li class="sub-menu">
                       <a  href="<?php echo base_url(). 'Welcome/trophy'; ?>" >
                           <i class="fa fa-tasks"></i>
@@ -239,10 +273,43 @@
                   </li>
                   <li class="sub-menu">
                       <a  href="<?php echo base_url(). 'Welcome/gallery'; ?>" >
+<<<<<<< HEAD
+=======
+=======
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-tasks"></i>
+                          <span>GBF Trophy</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="form_component.html">Form Components</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="<?php echo base_url(). 'Welcome/gallery'; ?>" >
+>>>>>>> d35e037aca67a2255808fea865e6fd305a4dea1b
+>>>>>>> 1616bf1c16798714a9d3f47305e742b2d0be6617
                           <i class="fa fa-th"></i>
                           <span>GBF Gallery</span>
                       </a>
                   </li>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class=" fa fa-bar-chart-o"></i>
+                          <span>GBF Birds</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="morris.html">Morris</a></li>
+                          <li><a  href="chartjs.html">Chartjs</a></li>
+                      </ul>
+                  </li>
+
+>>>>>>> d35e037aca67a2255808fea865e6fd305a4dea1b
+>>>>>>> 1616bf1c16798714a9d3f47305e742b2d0be6617
               </ul>
               <!-- sidebar menu end -->
           </div>
@@ -259,6 +326,10 @@
           		<div class="col-lg-12">
 				            <div>
                                 <table class="table">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1616bf1c16798714a9d3f47305e742b2d0be6617
                                     <h4>Belum dikonfirmasi</h4>
                                   <thead>
                                     <tr>
@@ -299,10 +370,20 @@
                             <div>
                                 <table class="table">
                                     <h4>Belum melunasi pembayaran</h4>
+<<<<<<< HEAD
+=======
+=======
+                                    <h4>Booking Belum Direspon</h4>
+>>>>>>> d35e037aca67a2255808fea865e6fd305a4dea1b
+>>>>>>> 1616bf1c16798714a9d3f47305e742b2d0be6617
                                   <thead>
                                     <tr>
                                         <th scope="col">No</th>
                                         <th scope="col">Kode Booking</th>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1616bf1c16798714a9d3f47305e742b2d0be6617
                                         <th scope="col">Tanggal Booking</th>
                                         <th scope="col">Jenis</th>
                                         <th scope="col">Induk Jantan</th>
@@ -311,11 +392,24 @@
                                         <th scope="col">Nama</th>
                                         <th scope="col">Nomor Telepon</th>
                                         <th scope="col">Harga</th>
+<<<<<<< HEAD
+=======
+=======
+                                        <th scope="col">Judul</th>
+                                        <th scope="col">Tanggal</th>
+                                        <th scope="col">Foto</th>
+                                        <th scope="col">Aksi</th>
+>>>>>>> d35e037aca67a2255808fea865e6fd305a4dea1b
+>>>>>>> 1616bf1c16798714a9d3f47305e742b2d0be6617
                                     </tr>
                                   </thead>
                                   <tbody>
                                        <?php 
                                         $no = 1;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1616bf1c16798714a9d3f47305e742b2d0be6617
                                         foreach($data1 as $u){ 
                                         ?>
                                     <tr>
@@ -330,10 +424,29 @@
                                       <td><?php echo $u->phone ?></td>
                                       <td><?php echo $u->harga ?></td>
                                       <td><form action="<?php echo base_url(). 'CrudAdmin/paided'; ?>" method="post"><input type="hidden" name="kode" value="<?php echo $u->kode ?>"  required><input type="submit" value="Tagihan Lunas" class="class="btn btn-primary p-3 mr-3 pl-5 pr-5 text-uppercase d-lg-inline d-md-inline d-sm-block d-block mb-3""></form></td>
+<<<<<<< HEAD
+=======
+=======
+                                        foreach($news as $n){ 
+                                        ?>
+                                    <tr>
+                                      <th scope="row"><?php echo $no++ ?></th>
+                                      <td><?php echo $n->id ?></td>
+                                      <td><?php echo $n->judul ?></td>
+                                      <td><?php echo $n->tanggal ?></td>
+                                      <td><img alt="photo gallery" height="50px" width="50px" src="<?php echo base_url().$n->photo ?>"></td>
+                                      <td><form action="<?php echo base_url(). 'CrudAdmin/editnews'; ?>" method="post"><input type="hidden" name="id" value="<?php echo $n->id ?>"  required><input type="submit" value="Edit" class="btn btn-warning"></form>
+                                      <form action="<?php echo base_url(). 'CrudAdmin/deletenews'; ?>" method="post"><input type="hidden" name="id" value="<?php echo $n->id ?>"  required><input type="submit" value="Delete" class="btn btn-warning"></form></td>
+>>>>>>> d35e037aca67a2255808fea865e6fd305a4dea1b
+>>>>>>> 1616bf1c16798714a9d3f47305e742b2d0be6617
                                     </tr>
                                       <?php } ?>
                                   </tbody>
                                 </table>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1616bf1c16798714a9d3f47305e742b2d0be6617
                                 
                                 <?php 
                                     echo $this->pagination->create_links();
@@ -519,6 +632,32 @@
                                     Kode  : <input type="text" name="kode" class="form-control"><br>
                                     <input type="submit" value="Delete" class="btn btn-warning">
                                 </form>
+<<<<<<< HEAD
+=======
+=======
+                                <?php 
+                                    echo $this->pagination->create_links();
+                                ?>
+                              </div>
+                    
+                              <div class="col-lg-5 col-md-8">
+                                <div class="form">
+
+                                <h4>Input News</h4>
+                                <form action="<?php echo base_url(). 'CrudAdmin/insertnews'; ?>" method="post" enctype="multipart/form-data">
+                                    ID : <input type="text" name="id" class="form-control" required><br>
+                                    Judul : <input type="text" name="judul" class="form-control" required><br>
+                                    Berita : <textarea name="berita" cols="30" rows="20" class="form-control" required></textarea>
+                                    <input type="hidden" name="tanggal" value="<?php echo date("Y-m-d") ?>" class="form-control" required><br/>
+                                    <input type="file" name="filetoupload" id="filetoupload" required><br/>
+                                    <input type="submit" value="Upload" class="btn btn-warning">
+                                </form>
+
+                                <br/>
+
+                                <br/>
+>>>>>>> d35e037aca67a2255808fea865e6fd305a4dea1b
+>>>>>>> 1616bf1c16798714a9d3f47305e742b2d0be6617
                                 </div>
                               </div>
                     

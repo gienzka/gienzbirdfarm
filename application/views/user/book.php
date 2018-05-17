@@ -89,6 +89,10 @@
               </div>
               <div class="media-body">
                 <span class="text-uppercase">Kenari Yorkshire</span>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1616bf1c16798714a9d3f47305e742b2d0be6617
                 <h5 class="mb-3">Cungcung</h5>
                   <p>
                     Jenis      : Kenari Yorkshire Belanda<br/>
@@ -96,6 +100,14 @@
                     Prestasi   : Kenari Merdu<br/>
                   </p>
                   <p>Bulu berwarna biru metalik dengan suara panjang nafas mencapai 1 menit dalam satu tarikan</p><br/>
+<<<<<<< HEAD
+=======
+=======
+                <h5 class="mb-3">Cicuk</h5>
+                  <p>Jenis    : </p><br/>
+                  <p>Jenis    : </p><br/>
+>>>>>>> d35e037aca67a2255808fea865e6fd305a4dea1b
+>>>>>>> 1616bf1c16798714a9d3f47305e742b2d0be6617
               </div>
             </div>
 
@@ -158,7 +170,15 @@
             <div class="col-md-6">
             
             <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
+<<<<<<< HEAD
               <div class="probootstrap-media-image" style="background-image: url(<?php echo base_url().'assets/images/love11.jpg'; ?>)">
+=======
+<<<<<<< HEAD
+              <div class="probootstrap-media-image" style="background-image: url(<?php echo base_url().'assets/images/love11.jpg'; ?>)">
+=======
+              <div class="probootstrap-media-image" style="background-image: url(assets/images/img_4.jpg)">
+>>>>>>> d35e037aca67a2255808fea865e6fd305a4dea1b
+>>>>>>> 1616bf1c16798714a9d3f47305e742b2d0be6617
               </div>
               <div class="media-body">
                 <span class="text-uppercase">Lovebird</span>
@@ -250,7 +270,15 @@
                   <input type="hidden" name="phone" value="<?php echo $u->phone ?>" required>
                   <input type="hidden" name="tanggal" value="<?php echo date("Y-m-d") ?>" required>
                   <input type="hidden" name="nama" value="<?php echo $u->nama ?>" required>
+<<<<<<< HEAD
                   <input type="hidden" name="status" value="Unconfirmed" required>
+=======
+<<<<<<< HEAD
+                  <input type="hidden" name="status" value="Unconfirmed" required>
+=======
+                  <input type="hidden" name="status" value="Waiting" required>
+>>>>>>> d35e037aca67a2255808fea865e6fd305a4dea1b
+>>>>>>> 1616bf1c16798714a9d3f47305e742b2d0be6617
                 <input type="submit" class="btn btn-primary" id="submit" name="submit" value="Book Now">
               </div>
             </form>
