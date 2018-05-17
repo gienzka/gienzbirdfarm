@@ -44,12 +44,12 @@
       </div>
     </nav>
     <!-- END nav -->
-   <section class="probootstrap-cover overflow-hidden relative"  style="background-image: url('<?php echo base_url().'assets/images/canarybg.jpeg'; ?>');" data-stellar-background-ratio="0.5" id="section-home">
+   <section class="probootstrap-cover overflow-hidden relative"  style="background-image: url('<?php echo base_url().'assets/images/hihi.jpg'; ?>');" data-stellar-background-ratio="0.5" id="section-home">
       <div class="overlay"></div>
       <div class="container">
         <div class="row align-items-center text-center">
           <div class="col-md">
-            <h2 class="heading mb-2 display-4 font-light probootstrap-animate"><img height="300px" width="300px" src="<?php echo base_url(). 'assets/images/gbf1.png'; ?>"></h2>
+            <h2 class="heading mb-2 display-4 font-light probootstrap-animate">Booking History</h2>
            
           </div> 
         </div>
@@ -79,8 +79,6 @@
                                         <th scope="col">No</th>
                                         <th scope="col">Kode Booking</th>
                                         <th scope="col">Tanggal Booking</th>
-                                        <th scope="col">Induk Jantan</th>
-                                        <th scope="col">Induk Betina</th>
                                         <th scope="col">Catatan</th>
                                         <th scope="col">Status</th>
                                     </tr>
@@ -94,8 +92,6 @@
                                       <th scope="row"><?php echo $no++ ?></th>
                                       <td><?php echo $b->kode ?></td>
                                       <td><?php echo $b->tanggal ?></td>
-                                      <td><?php echo $b->indukJ ?></td>
-                                      <td><?php echo $b->indukB ?></td>
                                       <td><?php echo $b->catatan ?></td>
                                       <td><?php echo $b->status ?></td>
                                       <td><form action="<?php echo base_url(). 'User/cancelbook'; ?>" method="post"><input type="hidden" name="kode" value="<?php echo $b->kode ?>"  required><input type="submit" value="Cancel Booking" class="btn btn-primary"></form></td>
@@ -128,8 +124,7 @@
                                         <th scope="col">No</th>
                                         <th scope="col">Kode Booking</th>
                                         <th scope="col">Tanggal</th>
-                                        <th scope="col">Induk Jantan</th>
-                                        <th scope="col">Induk Betina</th>
+                                        <th scope="col">Catatan</th>
                     
                                     </tr>
                                   </thead>
@@ -142,8 +137,7 @@
                                       <th scope="row"><?php echo $no++ ?></th>
                                       <td><?php echo $h->kode ?></td>
                                       <td><?php echo $h->tanggal ?></td>
-                                      <td><?php echo $h->indukJ ?></td>
-                                      <td><?php echo $h->indukB ?></td>
+                                      <td><?php echo $h->catatan ?></td>
                                     </tr>
                                       <?php } ?>
                                   </tbody>

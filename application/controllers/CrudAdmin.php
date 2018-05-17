@@ -240,8 +240,7 @@ class CrudAdmin extends CI_Controller {
         $email = $this->input->post('email');
         $tanggal = $this->input->post('tanggal');
         $jenis = $this->input->post('jenis');
-        $indukJ = $this->input->post('indukJ');
-        $indukB = $this->input->post('indukB');
+        $catatan = $this->input->post('catatan');
         $harga = $this->input->post('harga');
         
         $data = array(
@@ -249,13 +248,20 @@ class CrudAdmin extends CI_Controller {
                 'email' => $email,
                 'tanggal' => $tanggal,
                 'jenis' => $jenis,
-                'indukJ' => $indukJ,
-                'indukB' => $indukB,
+                'catatan' => $catatan,
                 'harga' => $harga
             );
         
         $this->CrudModel->input_data($data, 'gbf_history');
+        $where = array(
+			'kode' => $kode
+			);
+            $table = 'gbf_book';
+            
+            $this->CrudModel->delete_data($table, $where );
         redirect(base_url().'Welcome/adminbook');
+        
+        
     }
     
     function updatebook()
@@ -263,13 +269,11 @@ class CrudAdmin extends CI_Controller {
         $kode = $this->input->post('kode');
         $harga = $this->input->post('harga');
         $jenis = $this->input->post('jenis');
-        $indukJ = $this->input->post('indukJ');
-        $indukB = $this->input->post('indukB');
+        $catatan = $this->input->post('catatan');
         
         $data = array(
                 'jenis' => $jenis,
-                'indukJ' => $indukJ,
-                'indukB' => $indukB,
+                'catatan' => $catatan,
                 'harga' => $harga
             );
         $where = array(

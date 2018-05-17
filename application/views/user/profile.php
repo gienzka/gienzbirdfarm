@@ -45,7 +45,7 @@
     </nav>
     <!-- END nav -->
    
-     <section class="probootstrap-cover overflow-hidden relative"  style="background-image: url('<?php echo base_url().'assets/images/canarybg.jpeg'; ?>');" data-stellar-background-ratio="0.5" id="section-home">
+     <section class="probootstrap-cover overflow-hidden relative"  style="background-image: url('<?php echo base_url().'assets/images/eat.jpg'; ?>');" data-stellar-background-ratio="0.5" id="section-home">
       <div class="overlay"></div>
       <div class="container">
         <div class="row align-items-center text-center">

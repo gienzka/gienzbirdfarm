@@ -50,7 +50,7 @@
                                         $no = 1;
                                         foreach($user as $u){ 
     ?>
-   <section class="probootstrap-cover overflow-hidden relative"  style="background-image: url('<?php echo base_url().'assets/images/babybird.JPG'; ?>');" data-stellar-background-ratio="0.5" id="section-home">
+   <section class="probootstrap-cover overflow-hidden relative"  style="background-image: url('<?php echo base_url().'assets/images/cagew.jpg'; ?>');" data-stellar-background-ratio="0.5" id="section-home">
       <div class="overlay"></div>
       <div class="container">
         <div class="row align-items-center text-center">

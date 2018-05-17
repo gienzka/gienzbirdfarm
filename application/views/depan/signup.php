@@ -86,7 +86,6 @@
                             <textarea name="address" cols="30" rows="10" class="form-control" id="message"  placeholder="Type your address" required></textarea>
                         
                                 <p style="color:black;">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-                     
                             <input type="submit" value="Submit" class="btn btn-primary btn-block">
                          </form>
                         </div>

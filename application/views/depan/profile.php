@@ -46,7 +46,7 @@
     </nav>
     <!-- END nav -->
         
-    <section class="probootstrap-cover overflow-hidden relative"  style="background-image: url(<?php echo base_url().'assets/images/bgprof.jpg'; ?>);" data-stellar-background-ratio="0.5" id="section-home">
+    <section class="probootstrap-cover overflow-hidden relative"  style="background-image: url(<?php echo base_url().'assets/images/bgcage.jpg'; ?>);" data-stellar-background-ratio="0.5" id="section-home">
       <div class="overlay"></div>
       <div class="container">
         <div class="row align-items-center text-center">
@@ -75,7 +75,11 @@
           <div class="col-md-12 text-center mb-5 probootstrap-animate">
             <h2 class="display-4 border-bottom probootstrap-section-heading"><img height="300px" width="300px" src="<?php echo base_url(). 'assets/images/gbf1.png'; ?>"></h2>
             <blockquote class="">
-              <p class="lead mb-4"><em>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</em></p>
+              <p class="lead mb-4"><em>Penangkaran Gienz Bird farm (GBF) merupakan penangkaran burung terutama untuk jenis burung  Murai Batu, Kenari (jenis Yorshire) dan Lovebird. Untuk burung murai batu Gienz Bird farm memiliki indukan yang berkualitas yang sudah pernah mendapatkan juara dalam beberapa even kejuaraan lokal dan regional. Indukan murai batu jantan yaitu jenis murai batu medan, bahorok dan marike. Sedangkan indukan murai batu betina yaitu jenis murai batu medan.
+Untuk burung kenari, indukan jantan berasal dari Negara lain (impor) yaitu jenis Yorkshire dengan kode ring kaki TKF (Turki), FPO (Portugal), FOI (Italia)dan kenari Yorkshire Lokal yang sudah pernah menjuarai beberapa even lokal, regional, dan nasional. Sedangkan indukan betina dengan kode ring kaki NB (Belanda), IOA (Inggris), dan beberapa kenari turunan F1, F2, F3, dan kenari lokal. Dengan kandang sebanyak 18 kandang, penangkaran Gienz Bird Farm menggunakan sistem soliter yaitu satu indukan jantan dipasangkan dengan beberapa indukan betina
+
+Untuk burung lovebird, penangkaran dengan sistem kandang koloni yang dihuni beberapa burung lovebird jenis lokal dengan jenis lutino mata merah, pastel biru, pastel ijo, fishery, dan warna-warna lain.
+</em></p>
               <p class="probootstrap-author">
                
                   <span class="probootstrap-name">Gienz Bird Farm</span>

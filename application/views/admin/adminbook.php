@@ -266,8 +266,6 @@
                                         <th scope="col">Kode Booking</th>
                                         <th scope="col">Tanggal Booking</th>
                                         <th scope="col">Jenis</th>
-                                        <th scope="col">Induk Jantan</th>
-                                        <th scope="col">Induk Betina</th>
                                         <th scope="col">Catatan</th>
                                         <th scope="col">Nama</th>
                                         <th scope="col">Nomor Telepon</th>
@@ -283,12 +281,10 @@
                                       <td><?php echo $b->kode ?></td>
                                       <td><?php echo $b->tanggal ?></td>
                                         <td><?php echo $b->jenis ?></td>
-                                      <td><?php echo $b->indukJ ?></td>
-                                      <td><?php echo $b->indukB ?></td>
                                       <td><?php echo $b->catatan ?></td>
                                       <td><?php echo $b->nama ?></td>
                                       <td><?php echo $b->phone ?></td>
-                                      <td><form action="<?php echo base_url(). 'CrudAdmin/confirmed'; ?>" method="post"><input type="hidden" name="kode" value="<?php echo $b->kode ?>"  required><input type="text" name="harga"  required><input type="submit" value="Beri Tagihan" class="class="btn btn-primary p-3 mr-3 pl-5 pr-5 text-uppercase d-lg-inline d-md-inline d-sm-block d-block mb-3""></form></td>
+                                      <td><form action="<?php echo base_url(). 'CrudAdmin/confirmed'; ?>" method="post"><input type="hidden" name="kode" value="<?php echo $b->kode ?>"  required><input class="form-control" type="text" name="harga"  required><input type="submit" value="Beri Tagihan" class="btn btn-warning"></form></td>
                                     </tr>
                                       <?php } ?>
                                   </tbody>
@@ -305,8 +301,6 @@
                                         <th scope="col">Kode Booking</th>
                                         <th scope="col">Tanggal Booking</th>
                                         <th scope="col">Jenis</th>
-                                        <th scope="col">Induk Jantan</th>
-                                        <th scope="col">Induk Betina</th>
                                         <th scope="col">Catatan</th>
                                         <th scope="col">Nama</th>
                                         <th scope="col">Nomor Telepon</th>
@@ -323,13 +317,11 @@
                                       <td><?php echo $u->kode ?></td>
                                       <td><?php echo $u->tanggal ?></td>
                                        <td><?php echo $u->jenis ?></td>
-                                      <td><?php echo $u->indukJ ?></td>
-                                      <td><?php echo $u->indukB ?></td>
                                       <td><?php echo $u->catatan ?></td>
                                       <td><?php echo $u->nama ?></td>
                                       <td><?php echo $u->phone ?></td>
                                       <td><?php echo $u->harga ?></td>
-                                      <td><form action="<?php echo base_url(). 'CrudAdmin/paided'; ?>" method="post"><input type="hidden" name="kode" value="<?php echo $u->kode ?>"  required><input type="submit" value="Tagihan Lunas" class="class="btn btn-primary p-3 mr-3 pl-5 pr-5 text-uppercase d-lg-inline d-md-inline d-sm-block d-block mb-3""></form></td>
+                                      <td><form action="<?php echo base_url(). 'CrudAdmin/paided'; ?>" method="post"><input type="hidden" name="kode" value="<?php echo $u->kode ?>"  required><input type="submit" value="Tagihan Lunas" class="btn btn-warning"></form></td>
                                     </tr>
                                       <?php } ?>
                                   </tbody>
@@ -350,8 +342,6 @@
                                         <th scope="col">Kode Booking</th>
                                         <th scope="col">Tanggal Booking</th>
                                         <th scope="col">Jenis</th>
-                                        <th scope="col">Induk Jantan</th>
-                                        <th scope="col">Induk Betina</th>
                                         <th scope="col">Catatan</th>
                                         <th scope="col">Nama</th>
                                         <th scope="col">Nomor Telepon</th>
@@ -367,20 +357,17 @@
                                       <td><?php echo $m->kode ?></td>
                                       <td><?php echo $m->tanggal ?></td>
                                         <td><?php echo $m->jenis ?></td>
-                                      <td><?php echo $m->indukJ ?></td>
-                                      <td><?php echo $m->indukB ?></td>
                                       <td><?php echo $m->catatan ?></td>
                                       <td><?php echo $m->nama ?></td>
                                       <td><?php echo $m->phone ?></td>
                                       <td><form action="<?php echo base_url(). 'CrudAdmin/endbook'; ?>" method="post">
                                           <input type="hidden" name="kode" value="<?php echo $m->kode ?>"  required>
-                                          <input type="hidden" name="kode" value="<?php echo $m->email ?>"  required>
-                                          <input type="hidden" name="kode" value="<?php echo $m->tanggal ?>"  required>
-                                          <input type="hidden" name="kode" value="<?php echo $m->jenis ?>"  required>
-                                          <input type="hidden" name="kode" value="<?php echo $m->indukJ ?>"  required>
-                                          <input type="hidden" name="kode" value="<?php echo $m->indukB ?>"  required>
-                                          <input type="hidden" name="kode" value="<?php echo $m->harga ?>"  required>
-                                          <input type="submit" value="Selesai" class="class="btn btn-primary p-3 mr-3 pl-5 pr-5 text-uppercase d-lg-inline d-md-inline d-sm-block d-block mb-3""></form></td>
+                                          <input type="hidden" name="email" value="<?php echo $m->email ?>"  required>
+                                          <input type="hidden" name="tanggal" value="<?php echo $m->tanggal ?>"  required>
+                                          <input type="hidden" name="jenis" value="<?php echo $m->jenis ?>"  required>
+                                          <input type="hidden" name="catatan" value="<?php echo $m->catatan ?>"  required>
+                                          <input type="hidden" name="harga" value="<?php echo $m->harga ?>"  required>
+                                          <input type="submit" value="Selesai" class="btn btn-warning"></form></td>
                                     </tr>
                                       <?php } ?>
                                   </tbody>
@@ -401,8 +388,6 @@
                                         <th scope="col">Kode Booking</th>
                                         <th scope="col">Tanggal Booking</th>
                                         <th scope="col">Jenis</th>
-                                        <th scope="col">Induk Jantan</th>
-                                        <th scope="col">Induk Betina</th>
                                         <th scope="col">Catatan</th>
                                         <th scope="col">Nama</th>
                                         <th scope="col">Nomor Telepon</th>
@@ -418,20 +403,17 @@
                                       <td><?php echo $k->kode ?></td>
                                       <td><?php echo $k->tanggal ?></td>
                                         <td><?php echo $k->jenis ?></td>
-                                      <td><?php echo $k->indukJ ?></td>
-                                      <td><?php echo $k->indukB ?></td>
                                       <td><?php echo $k->catatan ?></td>
                                       <td><?php echo $k->nama ?></td>
                                       <td><?php echo $k->phone ?></td>
                                       <td><form action="<?php echo base_url(). 'CrudAdmin/endbook'; ?>" method="post">
                                           <input type="hidden" name="kode" value="<?php echo $k->kode ?>"  required>
-                                          <input type="hidden" name="kode" value="<?php echo $k->email ?>"  required>
-                                          <input type="hidden" name="kode" value="<?php echo $k->tanggal ?>"  required>
-                                          <input type="hidden" name="kode" value="<?php echo $k->jenis ?>"  required>
-                                          <input type="hidden" name="kode" value="<?php echo $k->indukJ ?>"  required>
-                                          <input type="hidden" name="kode" value="<?php echo $k->indukB ?>"  required>
-                                          <input type="hidden" name="kode" value="<?php echo $k->harga ?>"  required>
-                                          <input type="submit" value="Selesai" class="class="btn btn-primary p-3 mr-3 pl-5 pr-5 text-uppercase d-lg-inline d-md-inline d-sm-block d-block mb-3""></form></td>
+                                          <input type="hidden" name="email" value="<?php echo $k->email ?>"  required>
+                                          <input type="hidden" name="tanggal" value="<?php echo $k->tanggal ?>"  required>
+                                          <input type="hidden" name="jenis" value="<?php echo $k->jenis ?>"  required>
+                                          <input type="hidden" name="catatan" value="<?php echo $k->catatan ?>"  required>
+                                          <input type="hidden" name="harga" value="<?php echo $k->harga ?>"  required>
+                                          <input type="submit" value="Selesai" class="btn btn-warning"></form></td>
                                     </tr>
                                       <?php } ?>
                                   </tbody>
@@ -453,8 +435,6 @@
                                         <th scope="col">Kode Booking</th>
                                         <th scope="col">Tanggal Booking</th>
                                         <th scope="col">Jenis</th>
-                                        <th scope="col">Induk Jantan</th>
-                                        <th scope="col">Induk Betina</th>
                                         <th scope="col">Catatan</th>
                                         <th scope="col">Nama</th>
                                         <th scope="col">Nomor Telepon</th>
@@ -470,20 +450,19 @@
                                       <td><?php echo $l->kode ?></td>
                                       <td><?php echo $l->tanggal ?></td>
                                         <td><?php echo $l->jenis ?></td>
-                                      <td><?php echo $l->indukJ ?></td>
-                                      <td><?php echo $l->indukB ?></td>
                                       <td><?php echo $l->catatan ?></td>
                                       <td><?php echo $l->nama ?></td>
                                       <td><?php echo $l->phone ?></td>
                                       <td><form action="<?php echo base_url(). 'CrudAdmin/endbook'; ?>" method="post">
                                           <input type="hidden" name="kode" value="<?php echo $l->kode ?>"  required>
-                                          <input type="hidden" name="kode" value="<?php echo $l->email ?>"  required>
-                                          <input type="hidden" name="kode" value="<?php echo $l->tanggal ?>"  required>
-                                          <input type="hidden" name="kode" value="<?php echo $l->jenis ?>"  required>
-                                          <input type="hidden" name="kode" value="<?php echo $l->indukJ ?>"  required>
-                                          <input type="hidden" name="kode" value="<?php echo $l->indukB ?>"  required>
-                                          <input type="hidden" name="kode" value="<?php echo $l->harga ?>"  required>
-                                          <input type="submit" value="Selesai" class="class="btn btn-primary p-3 mr-3 pl-5 pr-5 text-uppercase d-lg-inline d-md-inline d-sm-block d-block mb-3""></form></td>
+                                          <input type="hidden"  name="email" value="<?php echo $l->email ?>"  required>
+                                          <input type="hidden"  name="tanggal" value="<?php echo $l->tanggal ?>"  required>
+                                          <input type="hidden"  name="jenis" value="<?php echo $l->jenis ?>"  required>
+                                          <input type="hidden"  name="catatan" value="<?php echo $l->catatan ?>"  required>
+                                          <input type="hidden"  name="harga" value="<?php echo $l->harga ?>"  required>
+                                          <input type="submit" value="Selesai" class="btn btn-warning">
+                                          </form>
+                                        </td>
                                     </tr>
                                       <?php } ?>
                                   </tbody>
@@ -506,8 +485,7 @@
                                     Kode : <input type="text" name="kode" class="form-control" required><br>
                                     Harga : <input type="text" name="harga" class="form-control" required><br>
                                     Jenis : <input type="text" name="jenis" class="form-control" required><br>
-                                    Induk Jantan : <input type="text" name="indukJ" class="form-control" required><br>
-                                    Induk Betina : <input type="text" name="indukB" class="form-control" required><br>
+                                    Catatan : <input type="text" name="catatan" class="form-control" required><br>
                                     <input type="submit" value="Update" class="btn btn-warning">
                                 </form>
 

@@ -8,9 +8,13 @@ class User extends CI_Controller {
         $this->load->model('CrudModel');
         $this->load->helper("file");
  	} 
-    
+    function anti_xss($source)
+    {
+        $f=stripslashes(strip_tags(htmlspecialchars ($source,ENT_QUOTES)));
+        return $f;
+    }
     function updateprofilephoto(){
-        $email = $this->input->post('email');
+        $email = $this->anti_xss($this->input->post('email',TRUE));
         $photo = 'assets/images/userprofile/' . basename($_FILES["filetoupload"]["name"]);
         
         $data = array(
@@ -40,11 +44,10 @@ class User extends CI_Controller {
     
     function updateprofile()
     {
-            $nama = $this->input->post('nama');
-            $phone = $this->input->post('phone');
-            $address = $this->input->post('address');
-            $email = $this->input->post('email');
-
+            $nama = $this->anti_xss($this->input->post('nama',TRUE));
+            $phone = $this->anti_xss($this->input->post('phone',TRUE));
+            $address = $this->anti_xss($this->input->post('address',TRUE));
+            $email = $this->anti_xss($this->input->post('email',TRUE));
             $data = array(
                 'nama' => $nama,
                 'phone' => $phone,
@@ -61,8 +64,8 @@ class User extends CI_Controller {
     
     function updatepassword()
     {
-            $email = $this->input->post('email');
-            $password = $this->input->post('password');
+            $email = $this->anti_xss($this->input->post('email',TRUE));
+            $password = $this->anti_xss($this->input->post('password',TRUE));
             $pass = md5($password);
 
             $data = array(
@@ -79,15 +82,13 @@ class User extends CI_Controller {
     
     function go_book()
     {
-            $email = $this->input->post('email');
-            $phone = $this->input->post('phone');
-            $nama = $this->input->post('nama');
-            $tanggal = $this->input->post('tanggal');
-            $status = $this->input->post('status');
-            $indukJ = $this->input->post('indukJ');
-            $indukB = $this->input->post('indukB');
-            $catatan = $this->input->post('catatan');
-            $jenis = $this->input->post('jenis');
+            $email = $this->anti_xss($this->input->post('email',TRUE));
+            $phone = $this->anti_xss($this->input->post('phone',TRUE));
+            $nama = $this->anti_xss($this->input->post('nama',TRUE));
+            $tanggal = $this->anti_xss($this->input->post('tanggal',TRUE));
+            $status = $this->anti_xss($this->input->post('status',TRUE));
+            $catatan = $this->anti_xss($this->input->post('catatan',TRUE));
+            $jenis = $this->anti_xss($this->input->post('jenis',TRUE));
             
             $kode1 = substr($email,0,2); 
             $kode2 = substr($nama,1,3);
@@ -102,10 +103,8 @@ class User extends CI_Controller {
                 'status' => $status,
                 'email' => $email,
                 'kode' => $kode,
-                'indukJ' => $indukJ,
-                'indukB' => $indukB,
                 'catatan' => $catatan,
-                'jenis' => $jenis,
+                'jenis' => $jenis
             );
 
             $this->CrudModel->input_data($data, 'gbf_book');
@@ -114,7 +113,7 @@ class User extends CI_Controller {
     
     function cancelbook()
     {
-        $kode = $this->input->post('kode');
+        $kode = $this->anti_xss($this->input->post('kode',TRUE));
             $where = array(
 			'kode' => $kode
 			);

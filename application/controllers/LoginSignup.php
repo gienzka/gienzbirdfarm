@@ -8,12 +8,19 @@ class LoginSignup extends CI_Controller {
         $this->load->model('CrudModel');
  	}
     
+    function anti_xss($source)
+    {
+        $f=stripslashes(strip_tags(htmlspecialchars ($source,ENT_QUOTES)));
+        return $f;
+    }
+    
     function signup(){
-		$nama = $this->input->post('nama');
-        $email = $this->input->post('email');
-        $password = $this->input->post('password');
-        $address = $this->input->post('address');
-        $phone = $this->input->post('phone');
+		$nama = $this->anti_xss($this->input->post('nama',TRUE));  
+        $email = $this->anti_xss($this->input->post('email',TRUE));
+        $password = $this->anti_xss($this->input->post('password',TRUE));
+        $address = $this->anti_xss($this->input->post('address',TRUE));
+        $phone = $this->anti_xss($this->input->post('phone',TRUE));
+        $photo = 'assets/images/userprofile/gbf1.png';
         $access = 1;
  
         $pass = md5($password);
@@ -24,7 +31,7 @@ class LoginSignup extends CI_Controller {
             'password' => $pass,
 			'phone' => $phone,
             'address' => $address,
-            'photo' => " ",
+            'photo' => $photo,
             'access' => $access
 			);
         
@@ -33,8 +40,8 @@ class LoginSignup extends CI_Controller {
 	}
     
     function do_login(){
-		$email = $this->input->post('email');
-		$password = $this->input->post('password');
+		$email = $this->anti_xss($this->input->post('email',TRUE));
+		$password = $this->anti_xss($this->input->post('password',TRUE));
         
         $pass = md5($password);
         

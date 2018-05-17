@@ -69,31 +69,30 @@
         
         <div class="row">
           <div class="col-md-6 probootstrap-animate">
-            <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+            <p class="mb-5">Untuk informasi lebih mengenai GBF dapat menghubungi kami.</p>
             <div class="row">
               <div class="col-md-6">
                 <ul class="probootstrap-contact-details">
                   <li>
                     <span class="text-uppercase"><span class="ion-paper-airplane"></span> Email</span>
-                    probootstrap@gmail.com
+                    gienzbirdfarm@gmail.com
                   </li>
                   <li>
                     <span class="text-uppercase"><span class="ion-ios-telephone"></span> Phone</span>
-                    +30 976 1382 9921
+                    081356851835
                   </li>
                 </ul>
               </div>
               <div class="col-md-6">
                 <ul class="probootstrap-contact-details">
                   <li>
-                    <span class="text-uppercase"><span class="ion-ios-telephone"></span> Fax</span>
-                    +30 976 1382 9922
+                    <span class="text-uppercase"><span class="ion-ios-telephone"></span> Facebook</span>
+                    Gienz Bird Farm
                   </li>
                   <li>
-                    <span class="text-uppercase"><span class="ion-location"></span> Address</span>
-                    San Francisco, CA <br>
-                    4th Floor8 Lower  <br>
-                    San Francisco street, M1 50F
+                    <span class="text-uppercase"><span class="ion-location"></span> Alamat</span>
+                      Jl. Danau Maninjau Raya Ujung No. 6 RT.03/07 Abadijaya, <br>Sukmajaya Depok II Timur<br> 16417
+                   
                   </li>
                 </ul>
               </div>

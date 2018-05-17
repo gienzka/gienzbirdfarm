@@ -103,7 +103,7 @@
        
 
     <section class="probootstrap-section-half d-md-flex" id="section-about">
-      <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<?php echo base_url().'assets/images/babybird.JPG'; ?>)"></div>
+      <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<?php echo base_url().'assets/images/babybird.jpg'; ?>)"></div>
       <div class="probootstrap-text">
         <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight">
           <h2 class="heading mb-4">Bird Breeder</h2>
@@ -116,12 +116,12 @@
 
 
     <section class="probootstrap-section-half d-md-flex">
-      <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<?php echo base_url().'assets/images/imgss.JPG'; ?>)"></div>
+      <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<?php echo base_url().'assets/images/accbg.jpg'; ?>)"></div>
       <div class="probootstrap-text order-1">
         <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInLeft">
           <h2 class="heading mb-4">GBF Accessories</h2>
           <p>Selain peternakan burung, GBF juga memiliki produk-produk aksesoris keren dan kekinian seperti kadang burung, sarung kandang burung dan lain-lain.</p>
-          <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+          <p>Setiap produk yang dibuat oleh GBF menggunakan bahan berkualitas tinggi dan memiliki desain terbaik</p>
           <p><a href="#" class="btn btn-primary">Discover More</a></p>
         </div>
       </div>
