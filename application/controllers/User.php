@@ -66,7 +66,7 @@ class User extends CI_Controller {
     {
             $email = $this->anti_xss($this->input->post('email',TRUE));
             $password = $this->anti_xss($this->input->post('password',TRUE));
-            $pass = md5($password);
+            $pass = $this->encrypt->encode($password);
 
             $data = array(
                 'password' => $pass

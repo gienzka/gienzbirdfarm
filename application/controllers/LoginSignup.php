@@ -6,6 +6,7 @@ class LoginSignup extends CI_Controller {
 		parent::__construct();		
         $this->load->helper(array('form'));
         $this->load->model('CrudModel');
+        $this->load->library('encrypt');
  	}
     
     function anti_xss($source)
@@ -22,8 +23,7 @@ class LoginSignup extends CI_Controller {
         $phone = $this->anti_xss($this->input->post('phone',TRUE));
         $photo = 'assets/images/userprofile/gbf1.png';
         $access = 1;
- 
-        $pass = md5($password);
+        $pass = $this->encrypt->encode($password);
         
 		$data = array(
 			'email' => $email,
@@ -42,18 +42,15 @@ class LoginSignup extends CI_Controller {
     function do_login(){
 		$email = $this->anti_xss($this->input->post('email',TRUE));
 		$password = $this->anti_xss($this->input->post('password',TRUE));
-        
-        $pass = md5($password);
-        
+
 		$where = array(
-			'email' => $email,
-			'password' => $pass
+			'email' => $email
 			);
-		$cek = $this->CrudModel->cek_data("gbf_user",$where)->num_rows();
-		if($cek > 0){
-    
-            $data['user'] = $this->CrudModel->cek_data("gbf_user",$where)->result();
-            foreach ($data['user'] as $u){
+		$data['user'] = $this->CrudModel->cek_data("gbf_user",$where)->result();
+        foreach ($data['user'] as $u){
+        $pass = $this->encrypt->decode($u->password);
+		if($password == $pass){
+            
                 
                 if($u->access > 0){
                     
@@ -72,13 +69,15 @@ class LoginSignup extends CI_Controller {
                     );
  
 			         $this->session->set_userdata($data_session);
+                    
                     redirect(base_url().'Welcome/admin');
                 }
-            }
+            
  
-		}else{
-			redirect(base_url().'Welcome/loginerr');
-		}
+		  }else{
+            redirect(base_url().'Welcome/loginerr');
+		  }
+        }
 	}
  
 	function logout(){
